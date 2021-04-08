@@ -2,8 +2,8 @@
   <div class="hero">
     <article>
       <p>Hoi 👋, ik ben</p>
-      <h1>Niels Bosman
-        <Semicolon/>
+      <h1>
+        Niels Bosman<Semicolon/>
       </h1>
       <p class="subtitle">
         Webontwikkelaar
