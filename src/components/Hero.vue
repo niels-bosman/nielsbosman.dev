@@ -1,12 +1,18 @@
 <template>
-  <div class="wrapper">
+  <div class="hero">
     <article>
       <p>Hoi 👋, ik ben</p>
-      <h1>Niels Bosman<Semicolon /></h1>
-      <p class="subtitle">Webontwikkelaar <DoubleAnd /> student</p>
+      <h1>Niels Bosman
+        <Semicolon/>
+      </h1>
+      <p class="subtitle">
+        Webontwikkelaar
+        <DoubleAnd/>
+        student
+      </p>
     </article>
-    <div class="floating-button">
-      <ScrollButton />
+    <div class="button-wrapper">
+      <ScrollButton/>
     </div>
   </div>
 </template>
@@ -30,7 +36,7 @@ export default {
 
 $gutter: 15px;
 
-.wrapper {
+.hero {
   position: relative;
   display: grid;
   place-items: center;
@@ -57,7 +63,7 @@ p {
   font-weight: 500;
 }
 
-.floating-button {
+.button-wrapper {
   position: absolute;
   right: 50%;
   bottom: calc(#{$gutter} + 60px);
