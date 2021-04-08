@@ -2,18 +2,26 @@
   <div class="wrapper">
     <article>
       <p>Hoi 👋, ik ben</p>
-      <h1>Niels Bosman<semicolon /></h1>
+      <h1>Niels Bosman<Semicolon /></h1>
+      <p class="subtitle">Webontwikkelaar <DoubleAnd /> student</p>
     </article>
+    <div class="floating-button">
+      <ScrollButton />
+    </div>
   </div>
 </template>
 
 <script>
-import Semicolon from './semicolon'
+import Semicolon from './Semicolon'
+import DoubleAnd from './DoubleAnd'
+import ScrollButton from './ScrollButton'
 
 export default {
   name: 'Hero',
   components: {
-    Semicolon
+    Semicolon,
+    DoubleAnd,
+    ScrollButton
   }
 }
 </script>
@@ -23,6 +31,7 @@ export default {
 $gutter: 15px;
 
 .wrapper {
+  position: relative;
   display: grid;
   place-items: center;
   height: calc(100vh - #{$gutter * 2});
@@ -38,8 +47,19 @@ h1 {
 }
 
 p {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 30px;
   color: #c1c1c1;
+}
+
+.subtitle {
+  text-align: center;
+  font-weight: 500;
+}
+
+.floating-button {
+  position: absolute;
+  right: 50%;
+  bottom: calc(#{$gutter} + 60px);
 }
 </style>
