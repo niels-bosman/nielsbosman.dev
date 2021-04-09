@@ -1,0 +1,16 @@
+@import "functions";
+
+@mixin fluidFontSize($min-fontsize, $max-fontsize, $min-breakpoint: 320px, $max-breakpoint: 1280px) {
+  $diff-breakpoint: strip-units($max-breakpoint - $min-breakpoint);
+  $diff-fontsize: $max-fontsize - $min-fontsize;
+
+  font-size: calc(#{$min-fontsize} + (#{strip-units($diff-fontsize * 10)} * ((100vw - #{$min-breakpoint}) / #{$diff-breakpoint})));
+
+  @media screen and (max-width: $min-breakpoint) {
+    font-size: $min-fontsize;
+  }
+
+  @media screen and (min-width: $max-breakpoint) {
+    font-size: $max-fontsize;
+  }
+}

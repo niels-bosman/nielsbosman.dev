@@ -1,16 +1,18 @@
 <template>
-  <span>&</span>
+  <span>
+    <slot/>
+  </span>
 </template>
 
 <script>
 export default {
-  name: "DoubleAnd"
+  name: 'Highlight'
 }
 </script>
 
 <style scoped>
 span {
-  color: #41B883;
+  color: var(--color-primary);
   font-weight: 900;
 }
 </style>

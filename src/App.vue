@@ -18,12 +18,21 @@ export default {
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 
+:root {
+  --color-dark: #1C1D25;
+  --color-light: #d7d7d7;
+  --color-lightest: #FFF;
+  --color-primary: #41B883;
+  --color-secondary: #B84176;
+}
+
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, button {
+* {
   font-family: 'Lato', sans-serif;
 }
 

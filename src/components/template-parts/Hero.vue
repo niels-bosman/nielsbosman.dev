@@ -1,13 +1,11 @@
 <template>
   <div class="hero">
-    <article>
-      <p>Hoi 👋, ik ben</p>
-      <h1>
-        Niels Bosman<semicolon/>
-      </h1>
+    <article class="content">
+      <p class="subtitle">Hoi 👋, ik ben</p>
+      <h1 class="heading">Niels Bosman</h1>
       <p class="subtitle">
         Webontwikkelaar
-        <double-and/>
+        <highlight>&</highlight>
         student
       </p>
     </article>
@@ -16,62 +14,59 @@
 </template>
 
 <script>
-import Semicolon from '../helpers/Semicolon'
-import DoubleAnd from '../helpers/DoubleAnd'
+
+import Highlight from '../helpers/Highlight'
 import ScrollButton from '../buttons/ScrollButton'
 
 export default {
   name: 'Hero',
-  components: {
-    Semicolon,
-    DoubleAnd,
-    ScrollButton
-  }
+
+  components: {Highlight, ScrollButton}
 }
+
 </script>
 
 <style lang="scss" scoped>
 
+@import "../../assets/scss/mixins";
+
 .hero {
-  position: relative;
   display: grid;
   place-items: center;
+  position: relative;
   height: 100vh;
-  background: url("../../assets/background-hero.svg") fixed;
-  background-size: cover;
+  background: #1c1d25;
 
   &:after {
-    content: '';
-    background-color: black;
+    @include fluidFontSize(10em, 30em);
+    content: "HALLO";
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 40%;
+    font-weight: 900;
+    color: var(--color-light);
+    opacity: 5%;
   }
 }
 
-article {
+.content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
   z-index: 1;
 }
 
-h1 {
+.heading {
+  @include fluidFontSize(6em, 8em);
   font-weight: 900;
-  font-size: 10em;
   margin: 20px 0;
-  color: #fff;
-}
-
-p {
-  font-weight: 500;
-  font-size: 30px;
-  color: #c1c1c1;
+  color: var(--color-lightest);
+  font-family: 'Lato Black', sans-serif;
 }
 
 .subtitle {
-  text-align: right;
-  font-weight: 500;
+  @include fluidFontSize(2em, 2em);
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-light);
 }
 
 </style>
