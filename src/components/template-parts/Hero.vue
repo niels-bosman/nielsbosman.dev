@@ -32,16 +32,13 @@ export default {
 
 <style lang="scss" scoped>
 
-$gutter: 20px;
-
 .hero {
   position: relative;
   display: grid;
   place-items: center;
-  height: calc(100vh - #{$gutter * 2});
+  height: 100vh;
   background: url("../../assets/background-hero.svg") fixed;
   background-size: cover;
-  margin: $gutter;
 
   &:after {
     content: '';
@@ -69,7 +66,7 @@ h1 {
 p {
   font-weight: 500;
   font-size: 30px;
-  color: #dcdcdc;
+  color: #c1c1c1;
 }
 
 .subtitle {
