@@ -1,9 +1,12 @@
 <template>
   <hero />
+  <article class="main">
+    Main
+  </article>
 </template>
 
 <script>
-import Hero from './components/Hero'
+import Hero from './components/template-parts/Hero'
 
 export default {
   name: 'App',
@@ -22,7 +25,8 @@ body {
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, a {
+h1, h2, h3, h4, h5, h6, p, a, button {
   font-family: 'Lato', sans-serif;
 }
+
 </style>

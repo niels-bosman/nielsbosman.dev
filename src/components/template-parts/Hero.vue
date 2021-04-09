@@ -16,9 +16,9 @@
 </template>
 
 <script>
-import Semicolon from './Semicolon'
-import DoubleAnd from './DoubleAnd'
-import ScrollButton from './ScrollButton'
+import Semicolon from '../helpers/Semicolon'
+import DoubleAnd from '../helpers/DoubleAnd'
+import ScrollButton from '../buttons/ScrollButton'
 
 export default {
   name: 'Hero',
@@ -39,8 +39,24 @@ $gutter: 20px;
   display: grid;
   place-items: center;
   height: calc(100vh - #{$gutter * 2});
-  background: #2a2a2f;
+  background: url("../../assets/background-hero-2.svg") fixed;
+  background-size: cover;
   margin: $gutter;
+
+  &:after {
+    content: '';
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 40%;
+  }
+}
+
+article {
+  z-index: 1;
 }
 
 h1 {
@@ -53,7 +69,7 @@ h1 {
 p {
   font-weight: 500;
   font-size: 30px;
-  color: #c1c1c1;
+  color: #dcdcdc;
 }
 
 .subtitle {
