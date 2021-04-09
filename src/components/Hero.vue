@@ -3,17 +3,15 @@
     <article>
       <p>Hoi 👋, ik ben</p>
       <h1>
-        Niels Bosman<Semicolon/>
+        Niels Bosman<semicolon/>
       </h1>
       <p class="subtitle">
         Webontwikkelaar
-        <DoubleAnd/>
+        <double-and/>
         student
       </p>
     </article>
-    <div class="button-wrapper">
-      <ScrollButton/>
-    </div>
+    <scroll-button/>
   </div>
 </template>
 
@@ -34,7 +32,7 @@ export default {
 
 <style lang="scss" scoped>
 
-$gutter: 15px;
+$gutter: 20px;
 
 .hero {
   position: relative;
@@ -63,9 +61,4 @@ p {
   font-weight: 500;
 }
 
-.button-wrapper {
-  position: absolute;
-  right: 50%;
-  bottom: calc(#{$gutter} + 60px);
-}
 </style>

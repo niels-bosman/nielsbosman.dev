@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="314ea999-7993-44be-9299-d715006186f4" name="Default Changelist" comment="Fix semicolon placing">
+    <list default="true" id="314ea999-7993-44be-9299-d715006186f4" name="Default Changelist" comment="Cleanup files.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ScrollButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ScrollButton.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +62,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1617902045984</updated>
-      <workItem from="1617902047238" duration="5985000" />
+      <workItem from="1617902047238" duration="6599000" />
+      <workItem from="1617963417587" duration="2009000" />
     </task>
     <task id="LOCAL-00001" summary="Base hero on desktop format">
       <created>1617905731861</created>
@@ -84,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617916145961</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Cleanup files.">
+      <created>1617952619585</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1617952619585</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,12 +109,14 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Base hero on desktop format" />
     <MESSAGE value="Changes." />
     <MESSAGE value="Fix semicolon placing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix semicolon placing" />
+    <MESSAGE value="Cleanup files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleanup files." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
