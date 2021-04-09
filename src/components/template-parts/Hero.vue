@@ -39,7 +39,7 @@ $gutter: 20px;
   display: grid;
   place-items: center;
   height: calc(100vh - #{$gutter * 2});
-  background: url("../../assets/background-hero-2.svg") fixed;
+  background: url("../../assets/background-hero.svg") fixed;
   background-size: cover;
   margin: $gutter;
 

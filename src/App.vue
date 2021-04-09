@@ -1,8 +1,6 @@
 <template>
   <hero />
-  <article class="main">
-    Main
-  </article>
+  <article class="main" style="height: 2000px"></article>
 </template>
 
 <script>
