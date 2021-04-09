@@ -57,7 +57,7 @@ p {
 }
 
 .subtitle {
-  text-align: center;
+  text-align: right;
   font-weight: 500;
 }
 
