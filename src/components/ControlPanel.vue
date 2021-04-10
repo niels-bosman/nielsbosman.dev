@@ -56,26 +56,33 @@ export default {
   list-style: none;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .item {
   font-size: 26px;
   color: var(--color-lightest);
   padding: 20px 16px;
+  border-radius: 0;
   cursor: pointer;
-  transition: var(--base-transition-timing) var(--base-transition-motion) color, background;
+  transition: var(--base-transition-timing) var(--base-transition-motion) all;
+
+  &:hover {
+    transform: scale(.9);
+  }
 
   &.active {
-    color: var(--color-primary);
+    border-radius: 24px;
 
     &:first-child {
-      border-radius: 24px 24px 0 0;
+      color: #F5F3CE;
+      box-shadow: 0 4px 20px -10px rgba(0,0,0,0.3);
       background: #ffffff08;
     }
 
     &:last-child {
-      border-radius: 0 0 24px 24px;
-      background: #00000008;
+      color: #F28C38;
+      box-shadow: 0 -4px 20px -10px rgba(0,0,0,0.3);
     }
   }
 }
