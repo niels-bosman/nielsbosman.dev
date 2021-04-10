@@ -38,10 +38,9 @@ export default {
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  border-radius: 20px;
+  border-radius: 24px;
   background: var(--color-dark-lighter);
   z-index: 1;
-  box-shadow: 5px 5px -10px -4px rgb(0 0 0 / 20%);
   transition: var(--base-transition-timing) var(--base-transition-motion) background;
 }
 
@@ -56,7 +55,7 @@ export default {
 .item {
   font-size: 26px;
   color: var(--color-lightest);
-  padding: 15px;
+  padding: 20px 16px;
   cursor: pointer;
   transition: var(--base-transition-timing) var(--base-transition-motion) color, background;
 
@@ -64,12 +63,12 @@ export default {
     color: var(--color-primary);
 
     &:first-child {
-      border-radius: 20px 20px 0 0;
+      border-radius: 24px 24px 0 0;
       background: #ffffff08;
     }
 
     &:last-child {
-      border-radius: 0 0 20px 20px;
+      border-radius: 0 0 24px 24px;
       background: #00000008;
     }
   }

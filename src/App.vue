@@ -38,6 +38,7 @@ export default {
   --color-button-text: #FFF;
   --color-primary: #41B883;
   --color-secondary: #B84176;
+
   --base-transition-timing: .4s;
   --base-transition-motion: ease;
 }
