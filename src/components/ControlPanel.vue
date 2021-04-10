@@ -1,10 +1,10 @@
 <template>
   <aside class="control-panel">
     <ul class="list">
-      <li class="item" :class="{'active' : isDark}" @click="change(true)">
+      <li class="item" :class="{'active' : isDark}" @click="setDark">
         <i class="fas fa-moon" />
       </li>
-      <li class="item" :class="{'active' : !isDark}" @click="change(false)">
+      <li class="item" :class="{'active' : !isDark}" @click="setLight">
         <i class="fas fa-sun" />
       </li>
     </ul>
@@ -25,6 +25,12 @@ export default {
         this.isDark = dark
         this.$emit("switch", this.isDark)
       }
+    },
+    setDark() {
+      this.change(true)
+    },
+    setLight() {
+      this.change(false)
     }
   },
 }

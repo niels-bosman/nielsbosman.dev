@@ -30,7 +30,7 @@ export default {
     transform: translate(50%, -5px);
 
     .button {
-      background-color: lighten(#B84176, 5%);
+      background-color: lighten(#41B883, 5%);
     }
   }
 }
@@ -39,7 +39,7 @@ export default {
   border: none;
   text-transform: uppercase;
   color: var(--color-button-text);
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   border-radius: 24px;
   text-decoration: none;
   padding: 16px 32px;
