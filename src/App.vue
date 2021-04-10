@@ -33,7 +33,7 @@ export default {
 :root {
   --color-dark: #1C1D25;
   --color-dark-lighter: #393b4c;
-  --color-light: #d7d7d7;
+  --color-light: #dbdbdb;
   --color-lightest: #FFF;
   --color-button-text: #FFF;
   --color-primary: #41B883;

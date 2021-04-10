@@ -48,6 +48,7 @@ export default {
   background: var(--color-dark-lighter);
   z-index: 1;
   transition: var(--base-transition-timing) var(--base-transition-motion) background;
+  will-change: background;
 }
 
 .list {
@@ -66,6 +67,7 @@ export default {
   border-radius: 0;
   cursor: pointer;
   transition: var(--base-transition-timing) var(--base-transition-motion) all;
+  will-change: transform, border-radius, color, background, box-shadow;
 
   &:hover {
     transform: scale(.9);

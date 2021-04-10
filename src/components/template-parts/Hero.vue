@@ -2,7 +2,7 @@
   <div class="hero">
     <article class="content">
       <p class="subtitle">Hoi 👋, ik ben</p>
-      <h1 class="heading">Niels Bosman</h1>
+      <h1 class="heading">Niels Bosman<highlight>.</highlight></h1>
       <p class="subtitle">
         Webontwikkelaar
         <highlight>&</highlight>
@@ -36,6 +36,7 @@ export default {
   height: 100vh;
   background: var(--color-dark);
   transition: var(--base-transition-timing) var(--base-transition-motion) background;
+  will-change: background;
 
   &:after {
     @include fluidFontSize(10em, 30em);
@@ -44,7 +45,8 @@ export default {
     font-weight: 900;
     color: var(--color-light);
     transition: var(--base-transition-timing) var(--base-transition-motion) color;
-    opacity: 5%;
+    will-change: color;
+    opacity: 4%;
   }
 }
 
@@ -62,14 +64,16 @@ export default {
   color: var(--color-lightest);
   font-family: 'Lato Black', sans-serif;
   transition: var(--base-transition-timing) var(--base-transition-motion) color;
+  will-change: color;
 }
 
 .subtitle {
   @include fluidFontSize(2em, 2em);
-  font-weight: 700;
+  font-weight: 900;
   margin: 0;
   color: var(--color-light);
   transition: var(--base-transition-timing) var(--base-transition-motion) color;
+  will-change: color;
 }
 
 </style>
