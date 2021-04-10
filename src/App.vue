@@ -43,6 +43,12 @@ export default {
   --base-transition-motion: ease;
 }
 
+::selection {
+  background: var(--color-dark-lighter);
+  color: var(--color-light);
+  text-shadow: none;
+}
+
 body {
   margin: 0;
   padding: 0;
