@@ -1,6 +1,11 @@
 <template>
-  <hero />
-  <article class="main" style="height: 2000px"></article>
+  <main
+      :class="isDark ? 'dark' : 'light'"
+      @click="isDark = !isDark"
+  >
+    <hero/>
+    <article style="height: 2000px"></article>
+  </main>
 </template>
 
 <script>
@@ -8,8 +13,9 @@ import Hero from './components/template-parts/Hero'
 
 export default {
   name: 'App',
-  components: {
-    Hero
+  components: {Hero},
+  data: () => {
+    return {isDark: true}
   }
 }
 </script>
@@ -22,8 +28,11 @@ export default {
   --color-dark: #1C1D25;
   --color-light: #d7d7d7;
   --color-lightest: #FFF;
+  --color-button-text: #FFF;
   --color-primary: #41B883;
   --color-secondary: #B84176;
+  --base-transition-timing: .4s;
+  --base-transition-motion: ease;
 }
 
 body {
@@ -34,6 +43,12 @@ body {
 
 * {
   font-family: 'Lato', sans-serif;
+}
+
+.light {
+  --color-light: #323d4d;
+  --color-lightest: #323d4d;
+  --color-dark: #d7d7d7;
 }
 
 </style>

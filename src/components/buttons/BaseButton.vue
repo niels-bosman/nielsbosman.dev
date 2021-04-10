@@ -38,14 +38,14 @@ export default {
 .button {
   border: none;
   text-transform: uppercase;
-  color: var(--color-lightest);
+  color: var(--color-button-text);
   background-color: var(--color-secondary);
   border-radius: 24px;
   text-decoration: none;
   padding: 16px 32px;
   font-weight: 700;
   font-size: 15px;
-  transition: .2s ease background-color;
+  transition: var(--base-transition-timing) var(--base-transition-motion) background-color;
   will-change: background-color;
   outline: none;
 

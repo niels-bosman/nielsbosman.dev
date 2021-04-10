@@ -6,8 +6,7 @@
       <p class="subtitle">
         Webontwikkelaar
         <highlight>&</highlight>
-        student
-      </p>
+        student</p>
     </article>
     <scroll-button/>
   </div>
@@ -35,7 +34,8 @@ export default {
   place-items: center;
   position: relative;
   height: 100vh;
-  background: #1c1d25;
+  background: var(--color-dark);
+  transition: var(--base-transition-timing) var(--base-transition-motion) background;
 
   &:after {
     @include fluidFontSize(10em, 30em);
@@ -43,6 +43,7 @@ export default {
     position: absolute;
     font-weight: 900;
     color: var(--color-light);
+    transition: var(--base-transition-timing) var(--base-transition-motion) color;
     opacity: 5%;
   }
 }
@@ -60,6 +61,7 @@ export default {
   margin: 20px 0;
   color: var(--color-lightest);
   font-family: 'Lato Black', sans-serif;
+  transition: var(--base-transition-timing) var(--base-transition-motion) color;
 }
 
 .subtitle {
@@ -67,6 +69,7 @@ export default {
   font-weight: 700;
   margin: 0;
   color: var(--color-light);
+  transition: var(--base-transition-timing) var(--base-transition-motion) color;
 }
 
 </style>
