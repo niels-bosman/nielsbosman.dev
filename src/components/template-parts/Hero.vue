@@ -1,12 +1,23 @@
 <template>
-  <div class="hero">
+  <div class="hero" @mousemove="mouseMovement">
     <article class="content">
-      <p class="subtitle">Hoi 👋, ik ben</p>
-      <h1 class="heading">Niels Bosman<highlight>.</highlight></h1>
-      <p class="subtitle">
+      <p class="subtitle"
+         :style="{'transform': `translate(${left()}px`}"
+      >
+        Hoi 👋, ik ben
+      </p>
+      <h1 class="heading"
+          :style="{'transform': `translate(${right()}px`}"
+      >
+        Niels Bosman<highlight>.</highlight>
+      </h1>
+      <p class="subtitle"
+         :style="{'transform': `translate(${left()}px`}"
+      >
         Webontwikkelaar
         <highlight>&</highlight>
-        student</p>
+        student
+      </p>
     </article>
     <scroll-button/>
   </div>
@@ -19,8 +30,24 @@ import ScrollButton from '../buttons/ScrollButton'
 
 export default {
   name: 'Hero',
-
-  components: {Highlight, ScrollButton}
+  components: { Highlight, ScrollButton },
+  data() {
+    return {
+      diffX: 0,
+      diffXModifier: 100,
+    }
+  },
+  methods: {
+    mouseMovement(event) {
+      this.diffX = event.clientX - window.innerWidth / 2;
+    },
+    left() {
+      return this.diffX / this.diffXModifier
+    },
+    right() {
+      return this.left() * -1
+    },
+  },
 }
 
 </script>

@@ -46,7 +46,7 @@ export default {
   transform: translateY(-50%);
   border-radius: 24px;
   background: var(--color-dark-lighter);
-  z-index: 1;
+  z-index: 99;
   transition: var(--base-transition-timing) var(--base-transition-motion) background;
   will-change: background;
 }
