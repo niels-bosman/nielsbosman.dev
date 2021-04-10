@@ -1,22 +1,28 @@
 <template>
-  <main
-      :class="isDark ? 'dark' : 'light'"
-      @click="isDark = !isDark"
-  >
+  <main :class="isDark ? 'dark' : 'light'">
+    <control-panel @switch="setTheme"/>
     <hero/>
+
+    <!-- Temp -->
     <article style="height: 2000px"></article>
   </main>
 </template>
 
 <script>
 import Hero from './components/template-parts/Hero'
+import ControlPanel from './components/ControlPanel'
 
 export default {
   name: 'App',
-  components: {Hero},
+  components: {ControlPanel, Hero},
   data: () => {
     return {isDark: true}
-  }
+  },
+  methods: {
+    setTheme(dark) {
+      this.isDark = dark;
+    }
+  },
 }
 </script>
 
@@ -26,6 +32,7 @@ export default {
 
 :root {
   --color-dark: #1C1D25;
+  --color-dark-lighter: #393b4c;
   --color-light: #d7d7d7;
   --color-lightest: #FFF;
   --color-button-text: #FFF;
@@ -49,6 +56,7 @@ body {
   --color-light: #323d4d;
   --color-lightest: #323d4d;
   --color-dark: #d7d7d7;
+  --color-dark-lighter: #FFF;
 }
 
 </style>
