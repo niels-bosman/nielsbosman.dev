@@ -14,7 +14,7 @@ export default {
 
   methods: {
     scroll() {
-      document.querySelector('.main').scrollIntoView({behavior: 'smooth'})
+      document.querySelector('.scrollTo').scrollIntoView({behavior: 'smooth'})
     }
   }
 }

@@ -4,7 +4,7 @@
     <hero/>
 
     <!-- Temp -->
-    <article style="height: 2000px"></article>
+    <article class="scrollTo" style="height: 2000px"></article>
   </main>
 </template>
 
