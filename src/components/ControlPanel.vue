@@ -75,16 +75,15 @@ export default {
 
   &.active {
     border-radius: 24px;
+    box-shadow: 0 0 20px -10px rgba(0,0,0,0.4);
 
     &:first-child {
       color: #F5F3CE;
-      box-shadow: 0 4px 20px -10px rgba(0,0,0,0.3);
       background: #ffffff08;
     }
 
     &:last-child {
       color: #F28C38;
-      box-shadow: 0 -4px 20px -10px rgba(0,0,0,0.3);
     }
   }
 }
