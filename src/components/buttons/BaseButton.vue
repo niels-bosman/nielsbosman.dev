@@ -1,9 +1,9 @@
 <template>
-  <div class="button-wrapper">
+
     <button class="button">
       <slot/>
     </button>
-  </div>
+
 </template>
 
 <script>
@@ -17,26 +17,9 @@ export default {
 
 <style lang="scss" scoped>
 
-.button-wrapper {
-  position: absolute;
-  right: 50%;
-  bottom: 80px;
-  transition: .3s ease all;
-  will-change: transform;
-  z-index: 1;
-  transform: translate(50%, 0);
-
-  &:hover {
-    transform: translate(50%, -5px);
-
-    .button {
-      background-color: lighten(#41B883, 5%);
-    }
-  }
-}
-
 .button {
   border: none;
+  width: max-content;
   text-transform: uppercase;
   color: var(--color-button-text);
   background-color: var(--color-primary);
@@ -51,6 +34,7 @@ export default {
 
   &:hover {
     cursor: pointer;
+    background-color: lighten(#41B883, 5%);
   }
 }
 </style>
