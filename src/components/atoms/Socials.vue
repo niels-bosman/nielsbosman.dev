@@ -40,12 +40,20 @@ export default {
 }
 
 .item {
+  transition: var(--base-transition-timing) var(--base-transition-motion) transform;
+  will-change: transform;
+
+  &:hover {
+    transform: translateY(3px);
+  }
+
   a {
     @include fluidFontSize(1.5em, 2em);
     color: var(--color-light);
     font-size: 2em;
     margin-right: 20px;
     transition: var(--base-transition-timing) var(--base-transition-motion) color;
+    will-change: color;
 
     @media (max-width: 600px) {
       margin-right: 10px;
