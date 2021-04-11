@@ -27,7 +27,15 @@
         <i class="fab fa-stack-overflow"/>
       </a>
     </li>
-    <li class="item"></li>
+    <li class="item">
+      <a :href="urls.instagram"
+         target="_blank"
+         rel="nofollow"
+         title="Instagram"
+      >
+        <i class="fab fa-instagram"/>
+      </a>
+    </li>
   </ul>
 </template>
 
@@ -39,7 +47,8 @@ export default {
       urls: {
         github: "https://github.com/niels-bosman",
         linkedin: "https://www.linkedin.com/in/nielz",
-        stackoverflow: "https://stackoverflow.com/users/12377207/niels-bosman"
+        stackoverflow: "https://stackoverflow.com/users/12377207/niels-bosman",
+        instagram: "https://instagram.com/nielsrbosman"
       }
     }
   },
