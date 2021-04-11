@@ -63,7 +63,7 @@ export default {
 
   &:after {
     @include fluidFontSize(10em, 30em);
-    content: "HALLO";
+    content: "HELLO";
     position: absolute;
     font-weight: 900;
     color: var(--color-light);
