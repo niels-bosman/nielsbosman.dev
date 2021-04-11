@@ -6,11 +6,11 @@
 
   font-size: calc(#{$min-fontsize} + (#{strip-units($diff-fontsize * 10)} * ((100vw - #{$min-breakpoint}) / #{$diff-breakpoint})));
 
-  @media screen and (max-width: $min-breakpoint) {
+  @media (max-width: $min-breakpoint) {
     font-size: $min-fontsize;
   }
 
-  @media screen and (min-width: $max-breakpoint) {
+  @media (min-width: $max-breakpoint) {
     font-size: $max-fontsize;
   }
 }

@@ -6,7 +6,7 @@
          title="Github"
          rel="nofollow"
       >
-        <i class="fab fa-github"></i>
+        <i class="fab fa-github"/>
       </a>
     </li>
     <li class="item">
@@ -15,7 +15,7 @@
          rel="nofollow"
          title="LinkedIn"
       >
-        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-linkedin"/>
       </a>
     </li>
     <li class="item">
@@ -24,7 +24,7 @@
          rel="nofollow"
          title="Stack Overflow"
       >
-        <i class="fab fa-stack-overflow"></i>
+        <i class="fab fa-stack-overflow"/>
       </a>
     </li>
     <li class="item"></li>

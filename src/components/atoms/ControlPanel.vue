@@ -50,7 +50,7 @@ export default {
   transition: var(--base-transition-timing) var(--base-transition-motion) background;
   will-change: background;
 
-  @media screen and (max-width: 900px) {
+  @media (max-width: 900px) {
     top: 20px;
     transform: translate(0, 0);
   }

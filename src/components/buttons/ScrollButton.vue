@@ -1,7 +1,7 @@
 <template>
   <div class="button-wrapper">
     <base-button title="Meer over mij" @click="scroll">
-      Meer over mij&nbsp;&nbsp;<i class="fas fa-level-down-alt"></i>
+      Meer over mij&nbsp;&nbsp;<i class="fas fa-level-down-alt"/>
     </base-button>
   </div>
 </template>
@@ -34,7 +34,7 @@ export default {
   z-index: 1;
   transform: translate(50%, 0);
 
-  @media screen and (max-width: 900px) {
+  @media (max-width: 900px) {
     bottom: 20px;
   }
 

@@ -90,7 +90,7 @@ export default {
   will-change: color;
   line-height: .9;
 
-  @media screen and (max-width: 900px) {
+  @media (max-width: 900px) {
     text-align: center;
   }
 }
@@ -103,7 +103,7 @@ export default {
   transition: var(--base-transition-timing) var(--base-transition-motion) color;
   will-change: color;
 
-  @media screen and (max-width: 900px) {
+  @media (max-width: 900px) {
     text-align: center;
     font-weight: 700;
   }
