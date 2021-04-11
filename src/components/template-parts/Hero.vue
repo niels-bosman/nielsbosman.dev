@@ -1,5 +1,6 @@
 <template>
   <div class="hero" @mousemove="mouseMovement">
+    <socials/>
     <article class="content">
       <p class="subtitle" :style="{'transform': `translate(${left()}px`}">
         Hoi 👋, ik ben
@@ -21,10 +22,11 @@
 
 import Highlight from '../helpers/Highlight'
 import ScrollButton from '../buttons/ScrollButton'
+import Socials from '../atoms/Socials'
 
 export default {
   name: 'Hero',
-  components: { Highlight, ScrollButton },
+  components: { Highlight, ScrollButton, Socials },
   data() {
     return {
       diffX: 0,

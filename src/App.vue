@@ -10,7 +10,7 @@
 
 <script>
 import Hero from './components/template-parts/Hero'
-import ControlPanel from './components/ControlPanel'
+import ControlPanel from './components/atoms/ControlPanel'
 
 export default {
   name: 'App',

@@ -74,6 +74,10 @@ export default {
   transition: var(--base-transition-timing) var(--base-transition-motion) all;
   will-change: transform, border-radius, color, background, box-shadow;
 
+  @media (max-width: 600px) {
+    padding: 15px 12px;
+  }
+
   &:hover {
     transform: scale(.9);
   }
