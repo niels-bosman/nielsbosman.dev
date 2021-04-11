@@ -19,7 +19,7 @@
       </a>
     </li>
     <li class="item">
-      <a :href="urls.linkedin"
+      <a :href="urls.stackoverflow"
          target="_blank"
          rel="nofollow"
          title="Stack Overflow"
