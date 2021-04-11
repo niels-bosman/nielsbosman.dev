@@ -66,10 +66,11 @@ export default {
     content: "HELLO";
     position: absolute;
     font-weight: 900;
-    color: var(--color-light);
-    transition: var(--base-transition-timing) var(--base-transition-motion) color;
+    color: transparent;
+    transition: var(--base-transition-timing) var(--base-transition-motion) -webkit-text-stroke;
     will-change: color;
-    opacity: 4%;
+    opacity: 7%;
+    -webkit-text-stroke: 7px var(--color-light);
   }
 }
 
