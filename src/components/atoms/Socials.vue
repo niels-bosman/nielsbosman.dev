@@ -1,17 +1,29 @@
 <template>
   <ul class="list">
     <li class="item">
-      <a href="https://github.com/niels-bosman" target="_blank" title="Github">
+      <a :href="urls.github"
+         target="_blank"
+         title="Github"
+         rel="nofollow"
+      >
         <i class="fab fa-github"></i>
       </a>
     </li>
     <li class="item">
-      <a href="https://www.linkedin.com/in/nielz" target="_blank" title="LinkedIn">
+      <a :href="urls.linkedin"
+         target="_blank"
+         rel="nofollow"
+         title="LinkedIn"
+      >
         <i class="fab fa-linkedin"></i>
       </a>
     </li>
     <li class="item">
-      <a href="https://stackoverflow.com/users/12377207/niels-bosman" target="_blank" title="Stack Overflow">
+      <a :href="urls.linkedin"
+         target="_blank"
+         rel="nofollow"
+         title="Stack Overflow"
+      >
         <i class="fab fa-stack-overflow"></i>
       </a>
     </li>
@@ -21,7 +33,16 @@
 
 <script>
 export default {
-  name: 'Socials'
+  name: 'Socials',
+  data() {
+    return {
+      urls: {
+        github: "https://github.com/niels-bosman",
+        linkedin: "https://www.linkedin.com/in/nielz",
+        stackoverflow: "https://stackoverflow.com/users/12377207/niels-bosman"
+      }
+    }
+  },
 }
 </script>
 
