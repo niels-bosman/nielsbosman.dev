@@ -73,7 +73,7 @@ export default {
   padding: 120px 0;
 
   &:after {
-    content: "XPRNCE";
+    content: "WORK";
   }
 
   @media (max-width: 1200px) {

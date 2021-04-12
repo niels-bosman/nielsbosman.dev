@@ -41,7 +41,7 @@
          rel="nofollow"
          title="Neem contact op via email"
       >
-        <i class="fas fa-at"/>
+        <i class="far fa-envelope"/>
       </a>
     </li>
   </ul>
