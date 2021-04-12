@@ -52,7 +52,7 @@ export default {
           jobTitle: 'Stagiair Wordpress Development',
           start: 'aug. 2018',
           end: 'jan. 2019',
-          description: 'Tijdens deze stage kennisgemaakt met het werken in Scrum en het leren van de Atlassian Toolstack voor het ontwikkelen van software.'
+          description: 'Tijdens deze stage kennisgemaakt met het werken in Scrum en het leren van de Atlassian Toolstack voor het ontwikkelen van software. Hiernaast ook kennis gemaakt met thema-ontwikkeling in Wordpress.'
         },
       }
     }

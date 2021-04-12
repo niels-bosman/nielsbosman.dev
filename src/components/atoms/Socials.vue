@@ -36,6 +36,14 @@
         <i class="fab fa-instagram"/>
       </a>
     </li>
+    <li class="item">
+      <a :href="`mailto:${urls.email}`"
+         rel="nofollow"
+         title="Neem contact op via email"
+      >
+        <i class="fas fa-at"/>
+      </a>
+    </li>
   </ul>
 </template>
 
@@ -48,7 +56,8 @@ export default {
         github: "https://github.com/niels-bosman",
         linkedin: "https://www.linkedin.com/in/nielz",
         stackoverflow: "https://stackoverflow.com/users/12377207/niels-bosman",
-        instagram: "https://instagram.com/nielsrbosman"
+        instagram: "https://instagram.com/nielsrbosman",
+        email: "niels.bosman@mail.com"
       }
     }
   },
