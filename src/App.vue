@@ -1,6 +1,6 @@
 <template>
   <main :class="isDark ? 'dark' : 'light'">
-    <control-panel @switch="setTheme"/>
+    <control-panel :is-dark="isDark" @switch="switchTheme"/>
     <hero/>
 
     <!-- Temp -->
@@ -14,15 +14,25 @@ import ControlPanel from './components/atoms/ControlPanel'
 
 export default {
   name: 'App',
-  components: {ControlPanel, Hero},
-  data: () => {
-    return {isDark: true}
+  components: { ControlPanel, Hero },
+  data() {
+    return { isDark: true }
   },
   methods: {
-    setTheme(dark) {
-      this.isDark = dark;
+    switchTheme() {
+      this.isDark = !this.isDark
     }
   },
+  created() {
+    const theme = window.localStorage.getItem('theme')
+
+    if (theme === null || theme === undefined) {
+      return
+    }
+
+    this.isDark = theme === 'dark'
+    window.localStorage.setItem('theme', this.isDark ? 'dark' : 'light')
+  }
 }
 </script>
 
@@ -64,7 +74,7 @@ body {
 .light {
   --color-light: #323d4d;
   --color-lightest: #323d4d;
-  --color-dark: #d7d7d7;
+  --color-dark: #e4e4e4;
   --color-dark-lighter: #FFF;
 }
 

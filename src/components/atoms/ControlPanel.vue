@@ -2,10 +2,10 @@
   <aside class="control-panel">
     <ul class="list">
       <li class="item" :class="{'active' : isDark}" @click="setDark">
-        <i class="fas fa-moon" />
+        <i class="fas fa-moon"/>
       </li>
       <li class="item" :class="{'active' : !isDark}" @click="setLight">
-        <i class="fas fa-sun" />
+        <i class="fas fa-sun"/>
       </li>
     </ul>
   </aside>
@@ -14,30 +14,29 @@
 <script>
 export default {
   name: 'ControlPanel',
-  data() {
-    return {
-      isDark: true
-    }
+  props: {
+    isDark: { type: Boolean, required: true },
   },
   methods: {
-    change(dark) {
-      if (this.isDark !== dark) {
-        this.isDark = dark
-        this.$emit("switch", this.isDark)
+    change(wantsToBeDark) {
+      // We only want to switch the theme if it is not equal to the current theme.
+      if (wantsToBeDark !== this.isDark) {
+        this.$emit("switch")
       }
     },
     setDark() {
       this.change(true)
+      window.localStorage.setItem('theme', 'dark')
     },
     setLight() {
       this.change(false)
+      window.localStorage.setItem('theme', 'light')
     }
   },
 }
 </script>
 
 <style scoped lang="scss">
-
 
 .control-panel {
   position: fixed;
@@ -84,7 +83,7 @@ export default {
 
   &.active {
     border-radius: 24px;
-    box-shadow: 0 0 20px -10px rgba(0,0,0,0.4);
+    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.4);
 
     &:first-child {
       color: #F5F3CE;
