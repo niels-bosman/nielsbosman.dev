@@ -87,12 +87,12 @@ $color-canvas-light-3: #e4e4e4;
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  word-wrap: break-word;
   font-family: 'Lato Black', sans-serif;
   color: var(--color-dark);
   font-weight: 900;
@@ -114,7 +114,10 @@ h1, h2, h3, h4, h5, h6, p, span {
 }
 
 .has-text {
+
   &:after {
+    max-width: 100vw;
+    overflow-x: hidden;
     @include fluidFontSize(8em, 25em);
     position: absolute;
     font-weight: 900;

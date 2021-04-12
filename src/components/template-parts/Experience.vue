@@ -70,7 +70,7 @@ export default {
   background: var(--color-dark);
   transition: var(--base-transition-timing) var(--base-transition-motion) background;
   will-change: background;
-  padding: 120px 0;
+  padding: 120px 15px;
 
   &:after {
     content: "WORK";
@@ -81,7 +81,7 @@ export default {
   }
 
   @media (max-width: 700px) {
-    padding: 65px 15px;
+    padding: 50px 15px;
   }
 }
 
@@ -117,6 +117,8 @@ export default {
   font-weight: 900;
   font-family: 'Lato', sans-serif;
   margin: 0 0 20px 0;
+  transition: var(--base-transition-timing) var(--base-transition-motion) color;
+  will-change: color;
 }
 
 article {
@@ -126,6 +128,8 @@ article {
   color: var(--color-light);
   max-width: 900px;
   z-index: 1;
+  transition: var(--base-transition-timing) var(--base-transition-motion) color;
+  will-change: color;
 
   @media (max-width: 1300px) {
     font-size: 16px;
