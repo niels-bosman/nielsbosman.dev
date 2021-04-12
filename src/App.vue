@@ -27,16 +27,16 @@ export default {
     },
   },
   created() {
-    const theme = window.localStorage.getItem('theme')
+    const storedTheme = window.localStorage.getItem('theme')
 
-    if (theme !== null) {
-      this.isDark = theme === 'dark'
+    if (storedTheme !== null) {
+      this.isDark = storedTheme === 'dark'
     } else {
       // Check for OS theme if nothing is set in storage yet (first hit).
       this.isDark = !this.OSIsLight()
     }
 
-    window.localStorage.setItem('theme', this.isDark ? 'dark' : 'light')
+    window.localStorage.setItem('isDark', this.isDark ? 'dark' : 'light')
   }
 }
 </script>
