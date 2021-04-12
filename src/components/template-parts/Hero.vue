@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import Highlight from '../helpers/Highlight'
+import Highlight from '../atoms/Highlight'
 import ScrollButton from '../buttons/ScrollButton'
 import Socials from '../atoms/Socials'
 import { isMobile } from 'mobile-device-detect'

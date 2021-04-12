@@ -42,7 +42,7 @@ export default {
 @import "assets/scss/mixins";
 @import "assets/scss/container";
 
-$color-canvas-dark-1: #303242;
+$color-canvas-dark-1: #31323a;
 $color-canvas-dark-2: #4e5065;
 $color-canvas-dark-3: #25262f;
 

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Highlight from '../helpers/Highlight'
+import Highlight from '../atoms/Highlight'
 
 export default {
   name: 'Projects',

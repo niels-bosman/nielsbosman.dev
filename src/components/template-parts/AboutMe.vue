@@ -14,11 +14,12 @@
             <highlight>HBO-ICT</highlight>
             op de Hogeschool van Arnhem en Nijmegen waarbij mijn uitstroomprofiel
             <highlight>Webdevelopment</highlight>
-            is. Dit betekend dat ik hierdoor mijn kennis van het onwikkelen van web-oplossingen kan vebreden. 👨🏼‍💻
+            is. Dit betekend dat ik hierdoor mijn kennis van het onwikkelen van web-oplossingen kan vebreden 👨🏼‍💻.
+            Deze opleiding volg ik als uitbreiding op mijn vooroplaiding <highlight>Software Development</highlight> op het Graafschap College in Doetinchem.
           </p>
           <p class="text">
             Naast mijn opleiding ben ik in mijn vrije tijd veel bezig met het ontwikkelen van hobby-projecten op het
-            gebied van Webdevelopment en werk ik ook als
+            gebied van Webdevelopment en ook werk ik als
             <highlight>Freelance Webontwikkelaar</highlight>.
           </p>
         </article>
@@ -35,7 +36,7 @@
 </template>
 
 <script>
-import Highlight from '../helpers/Highlight'
+import Highlight from '../atoms/Highlight'
 import { isMobile } from 'mobile-device-detect'
 
 export default {
