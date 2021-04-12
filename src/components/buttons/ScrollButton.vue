@@ -31,7 +31,7 @@ export default {
   transform: translate(50%, 0);
 
   @media (max-width: 900px) {
-    bottom: 20px;
+    bottom: 30px;
   }
 
   &:hover {

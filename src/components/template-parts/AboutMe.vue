@@ -4,21 +4,39 @@
       <h2 class="heading" :style="{'transform': `translate(${right()}px`}">
         Over mij<highlight>.</highlight>
       </h2>
-      <article :style="{'transform': `translate(${left()}px`}">
-        <p class="text">
-          Hoi! Mijn naam is Niels Bosman. Ik ben <highlight>{{getAge()}} jaar oud</highlight> en ik woon in Ede.
-          Momenteel zit ik in mijn tweede jaar van mijn studie <highlight>HBO-ICT</highlight> op de Hogeschool van Arnhem en Nijmegen waarbij mijn uitstroomprofiel <highlight>Webdevelopment</highlight> is. Dit betekend dat ik hierdoor mijn kennis voor het onwikkelen van web-oplossingen kan vebreden 👨🏼‍💻.
-        </p>
-        <p class="text">
-          Naast mijn opleiding ben ik in mijn vrije tijd veel bezig met het ontwikkelen van hobby-projecten op het gebied van Webdevelopment en werk ik ook als <highlight>Freelance Webdeveloper</highlight>.
-        </p>
-      </article>
+      <div class="under" :style="{'transform': `translate(${left()}px`}">
+        <article>
+          <p class="text">
+            Hoi! Mijn naam is Niels Bosman. Ik ben
+            <highlight>{{ getAge() }} jaar oud</highlight>
+            en ik woon in Ede.
+            Momenteel zit ik in mijn tweede jaar van mijn studie
+            <highlight>HBO-ICT</highlight>
+            op de Hogeschool van Arnhem en Nijmegen waarbij mijn uitstroomprofiel
+            <highlight>Webdevelopment</highlight>
+            is. Dit betekend dat ik hierdoor mijn kennis van het onwikkelen van web-oplossingen kan vebreden. 👨🏼‍💻
+          </p>
+          <p class="text">
+            Naast mijn opleiding ben ik in mijn vrije tijd veel bezig met het ontwikkelen van hobby-projecten op het
+            gebied van Webdevelopment en werk ik ook als
+            <highlight>Freelance Webontwikkelaar</highlight>.
+          </p>
+        </article>
+        <figure class="image">
+          <picture>
+            <source srcset="../../../public/me.webp" type="image/webp">
+            <source srcset="../../../public/me.jpeg" type="image/jpeg">
+            <img src="../../../public/me.jpeg" alt="Niels Bosman">
+          </picture>
+        </figure>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
 import Highlight from '../helpers/Highlight'
+import { isMobile } from 'mobile-device-detect'
 
 export default {
   name: 'AboutMe',
@@ -38,7 +56,9 @@ export default {
       return Math.abs(ageDate.getUTCFullYear() - 1970)
     },
     mouseMovement(event) {
-      this.diffX = event.clientX - window.innerWidth / 2;
+      if (!isMobile) {
+        this.diffX = event.clientX - window.innerWidth / 2
+      }
     },
     left() {
       return this.diffX / this.diffXModifier
@@ -53,8 +73,37 @@ export default {
 <style scoped lang="scss">
 @import "src/assets/scss/mixins";
 
+.image {
+  border-radius: 50%;
+  max-width: 300px;
+  max-height: 300px;
+  overflow: hidden;
+
+  @media (max-width: 1300px) {
+    max-width: 250px;
+    max-height: 250px;
+    margin-top: 60px;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+.under {
+  display: flex;
+
+  @media (max-width: 1300px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 900px) {
+    align-items: center;
+  }
+}
+
 .text {
-  @include fluidFontSize(14px, 20px);
+  font-size: 20px;
   line-height: 2;
   font-weight: 500;
   color: var(--color-light);
@@ -63,6 +112,10 @@ export default {
   max-width: 900px;
   margin: 0 0 40px 0;
 
+  @media (max-width: 1300px) {
+    font-size: 16px;
+  }
+
   &:last-child {
     margin: 0;
   }
@@ -70,9 +123,13 @@ export default {
 
 .heading {
   color: var(--color-lightest);
-  margin: 0 0 40px;
+  margin: 0 0 20px;
   transition: var(--base-transition-timing) var(--base-transition-motion) color;
   will-change: color;
+
+  @media (max-width: 700px) {
+    margin: 0 0 25px;
+  }
 }
 
 .content {
@@ -81,13 +138,14 @@ export default {
   background: var(--color-dark-lighter);
   transition: var(--base-transition-timing) var(--base-transition-motion) background;
   will-change: background;
+  padding: 150px 0;
 
   @media (max-width: 1200px) {
     padding: 100px 15px;
   }
 
   @media (max-width: 700px) {
-    padding: 50px 15px;
+    padding: 65px 15px;
   }
 
   &:after {

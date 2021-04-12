@@ -22,6 +22,7 @@
 import Highlight from '../helpers/Highlight'
 import ScrollButton from '../buttons/ScrollButton'
 import Socials from '../atoms/Socials'
+import { isMobile } from 'mobile-device-detect'
 
 export default {
   name: 'Hero',
@@ -34,7 +35,9 @@ export default {
   },
   methods: {
     mouseMovement(event) {
-      this.diffX = event.clientX - window.innerWidth / 2;
+      if (!isMobile) {
+        this.diffX = event.clientX - window.innerWidth / 2
+      }
     },
     left() {
       return this.diffX / this.diffXModifier

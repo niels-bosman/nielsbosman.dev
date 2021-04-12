@@ -3,7 +3,7 @@
     <li class="item">
       <a :href="urls.github"
          target="_blank"
-         title="Github"
+         title="GitHub"
          rel="nofollow"
       >
         <i class="fab fa-github"/>
