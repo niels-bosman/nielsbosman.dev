@@ -85,6 +85,10 @@ export default {
   }
 }
 
+.container {
+  z-index: 1;
+}
+
 .heading {
   text-align: center;
   font-weight: 900;

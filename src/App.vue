@@ -81,7 +81,6 @@ $color-canvas-light-3: #e4e4e4;
 
 ::selection {
   background: var(--color-dark-light);
-  color: var(--color-light);
 }
 
 body {
@@ -107,14 +106,7 @@ h2 {
   font-family: 'Lato', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, p, span {
-  &:hover {
-    cursor: default;
-  }
-}
-
 .has-text {
-
   &:after {
     max-width: 100vw;
     overflow-x: hidden;
