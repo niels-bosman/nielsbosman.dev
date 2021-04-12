@@ -19,7 +19,6 @@
 </template>
 
 <script>
-
 import Highlight from '../helpers/Highlight'
 import ScrollButton from '../buttons/ScrollButton'
 import Socials from '../atoms/Socials'
@@ -45,11 +44,9 @@ export default {
     },
   },
 }
-
 </script>
 
 <style lang="scss" scoped>
-
 @import "../../assets/scss/mixins";
 
 .hero {
@@ -112,5 +109,4 @@ export default {
     font-weight: 700;
   }
 }
-
 </style>

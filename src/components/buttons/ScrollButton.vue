@@ -5,26 +5,22 @@
     </base-button>
   </div>
 </template>
-<script>
 
+<script>
 import BaseButton from './BaseButton'
 
 export default {
   name: 'ScrollButton',
-
   components: { BaseButton },
-
   methods: {
     scroll() {
       document.querySelector('.scrollTo').scrollIntoView({ behavior: 'smooth' })
     }
   }
 }
-
 </script>
 
 <style lang="scss" scoped>
-
 .button-wrapper {
   position: absolute;
   right: 50%;
@@ -42,5 +38,4 @@ export default {
     transform: translate(50%, -5px);
   }
 }
-
 </style>

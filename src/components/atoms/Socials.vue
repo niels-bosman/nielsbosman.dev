@@ -56,7 +56,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
 @import "../../assets/scss/mixins";
 
 .list {
@@ -100,5 +99,4 @@ export default {
     margin-right: 0;
   }
 }
-
 </style>

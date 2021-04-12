@@ -37,7 +37,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
 .control-panel {
   position: fixed;
   right: 20px;
@@ -96,5 +95,4 @@ export default {
     }
   }
 }
-
 </style>

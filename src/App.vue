@@ -1,6 +1,6 @@
 <template>
   <main :class="[isDark ? 'dark' : 'light']">
-    <control-panel :is-dark="isDark" @switch="switchTheme"/>
+    <control-panel :is-dark="isDark" @switch="isDark = !isDark"/>
     <hero/>
 
     <!-- Temp -->
@@ -19,9 +19,6 @@ export default {
     return { isDark: true }
   },
   methods: {
-    switchTheme() {
-      this.isDark = !this.isDark
-    },
     OSIsDark() {
       return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
     },
@@ -36,7 +33,6 @@ export default {
 </script>
 
 <style>
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 
 :root {
@@ -79,5 +75,4 @@ h1, h2, h3, h4, h5, h6 {
   --color-dark: #E4E4E4;
   --color-dark-lighter: #FFF;
 }
-
 </style>
