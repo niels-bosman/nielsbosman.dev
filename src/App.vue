@@ -27,15 +27,9 @@ export default {
     },
   },
   created() {
+    // Base theme on currently set theme. Else base it on the OS theme.
     const storedTheme = window.localStorage.getItem('theme')
-
-    if (storedTheme !== null) {
-      this.isDark = storedTheme === 'dark'
-    } else {
-      // Check for OS theme if nothing is set in storage yet (first hit).
-      this.isDark = !this.OSIsLight()
-    }
-
+    this.isDark = storedTheme !== null ? storedTheme === 'dark' : !this.OSIsLight()
     window.localStorage.setItem('isDark', this.isDark ? 'dark' : 'light')
   }
 }
