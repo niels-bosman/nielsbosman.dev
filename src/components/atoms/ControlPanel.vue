@@ -62,6 +62,7 @@ export default {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  border-radius: 24px;
 }
 
 .item {
