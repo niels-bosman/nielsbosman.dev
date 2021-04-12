@@ -1,7 +1,7 @@
 <template>
   <section class="hero" @mousemove="mouseMovement">
     <socials/>
-    <article class="content">
+    <section class="content">
       <p class="subtitle" :style="{'transform': `translate(${left()}px`}">
         Hoi 👋🏻, ik ben
       </p>
@@ -13,7 +13,7 @@
         <highlight>&</highlight>
         student
       </h2>
-    </article>
+    </section>
     <scroll-button/>
   </section>
 </template>
