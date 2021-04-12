@@ -21,16 +21,21 @@ export default {
   methods: {
     switchTheme() {
       this.isDark = !this.isDark
-    }
+    },
+    OSIsLight() {
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches
+    },
   },
   created() {
     const theme = window.localStorage.getItem('theme')
 
-    if (theme === null || theme === undefined) {
-      return
+    if (theme !== null) {
+      this.isDark = theme === 'dark'
+    } else {
+      // Check for OS theme if nothing is set in storage yet (first hit).
+      this.isDark = !this.OSIsLight()
     }
 
-    this.isDark = theme === 'dark'
     window.localStorage.setItem('theme', this.isDark ? 'dark' : 'light')
   }
 }
