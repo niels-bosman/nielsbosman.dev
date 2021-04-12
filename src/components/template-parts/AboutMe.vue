@@ -129,6 +129,7 @@ export default {
 
   @media (max-width: 700px) {
     margin: 0 0 25px;
+    text-align: center;
   }
 }
 
