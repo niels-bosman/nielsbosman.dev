@@ -104,8 +104,12 @@ export default {
   transition: var(--base-transition-timing) var(--base-transition-motion) color;
   will-change: color;
 
+  &:last-child {
+    text-align: right;
+  }
+
   @media (max-width: 900px) {
-    text-align: center;
+    text-align: center !important;
     font-weight: 700;
   }
 }
