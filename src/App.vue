@@ -41,8 +41,8 @@ export default {
 
 :root {
   --color-dark: #1C1D25;
-  --color-dark-lighter: #393b4c;
-  --color-light: #dbdbdb;
+  --color-dark-lighter: #393B4C;
+  --color-light: #DBDBDB;
   --color-lightest: #FFF;
   --color-button-text: #FFF;
   --color-primary: #41B883;
@@ -71,9 +71,9 @@ body {
 }
 
 .light {
-  --color-light: #323d4d;
-  --color-lightest: #323d4d;
-  --color-dark: #e4e4e4;
+  --color-light: #323D4D;
+  --color-lightest: #323D4D;
+  --color-dark: #E4E4E4;
   --color-dark-lighter: #FFF;
 }
 
