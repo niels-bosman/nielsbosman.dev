@@ -14,7 +14,7 @@ export default {
   components: { BaseButton },
   methods: {
     scroll() {
-      document.querySelector('.scrollTo').scrollIntoView({ behavior: 'smooth' })
+      document.querySelector('.about-me').scrollIntoView({ behavior: 'smooth' })
     }
   }
 }

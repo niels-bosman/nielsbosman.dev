@@ -1,5 +1,5 @@
 <template>
-  <section class="hero" @mousemove="mouseMovement">
+  <section class="hero has-text" @mousemove="mouseMovement">
     <socials/>
     <section class="content">
       <p class="subtitle" :style="{'transform': `translate(${left()}px`}">
@@ -59,19 +59,7 @@ export default {
   will-change: background;
 
   &:after {
-    @include fluidFontSize(8em, 30em);
     content: "HELLO";
-    position: absolute;
-    font-weight: 900;
-    color: transparent;
-    transition: var(--base-transition-timing) var(--base-transition-motion) -webkit-text-stroke;
-    will-change: color;
-    opacity: 7%;
-    -webkit-text-stroke: 7px var(--color-light);
-
-    @media (max-width: 900px) {
-      -webkit-text-stroke-width: 4px;
-    }
   }
 }
 

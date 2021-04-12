@@ -43,7 +43,7 @@ export default {
   top: 50%;
   transform: translateY(-50%);
   border-radius: 24px;
-  background: var(--color-dark-lighter);
+  background: var(--color-dark-light);
   z-index: 99;
   transition: var(--base-transition-timing) var(--base-transition-motion) background;
   will-change: background;
