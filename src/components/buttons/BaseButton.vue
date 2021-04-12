@@ -1,8 +1,8 @@
 <template>
 
-    <button class="button">
-      <slot/>
-    </button>
+  <button class="button">
+    <slot/>
+  </button>
 
 </template>
 
@@ -10,7 +10,7 @@
 export default {
   name: 'Button',
   props: {
-    title: {type: String, required: true}
+    title: { type: String, required: true }
   }
 }
 </script>
