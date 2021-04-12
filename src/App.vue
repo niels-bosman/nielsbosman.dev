@@ -1,5 +1,5 @@
 <template>
-  <main :class="isDark ? 'dark' : 'light'">
+  <main :class="[isDark ? 'dark' : 'light']">
     <control-panel :is-dark="isDark" @switch="switchTheme"/>
     <hero/>
 
@@ -61,7 +61,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
