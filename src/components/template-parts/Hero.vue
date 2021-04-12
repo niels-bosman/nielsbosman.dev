@@ -1,5 +1,5 @@
 <template>
-  <div class="hero" @mousemove="mouseMovement">
+  <section class="hero" @mousemove="mouseMovement">
     <socials/>
     <article class="content">
       <p class="subtitle" :style="{'transform': `translate(${left()}px`}">
@@ -15,7 +15,7 @@
       </h2>
     </article>
     <scroll-button/>
-  </div>
+  </section>
 </template>
 
 <script>
