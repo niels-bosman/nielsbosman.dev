@@ -77,12 +77,8 @@ export default {
     padding: 15px 12px;
   }
 
-  &:hover {
+  &:hover:not(.active) {
     transform: scale(.9);
-
-    &.active {
-      transform: none;
-    }
   }
 
   &.active {
