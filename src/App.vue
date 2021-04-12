@@ -55,7 +55,6 @@ export default {
 ::selection {
   background: var(--color-dark-lighter);
   color: var(--color-light);
-  text-shadow: none;
 }
 
 body {
@@ -64,6 +63,10 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato Black', sans-serif;
 }
 
 * {

@@ -86,7 +86,6 @@ export default {
   font-weight: 900;
   margin: 20px 0;
   color: var(--color-lightest);
-  font-family: 'Lato Black', sans-serif;
   transition: var(--base-transition-timing) var(--base-transition-motion) color;
   will-change: color;
   line-height: .9;
