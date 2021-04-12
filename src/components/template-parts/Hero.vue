@@ -3,7 +3,7 @@
     <socials/>
     <article class="content">
       <p class="subtitle" :style="{'transform': `translate(${left()}px`}">
-        Hoi 👋, ik ben
+        Hoi 👋🏻, ik ben
       </p>
       <h1 class="heading" :style="{'transform': `translate(${right()}px`}">
         Niels Bosman<highlight>.</highlight>
