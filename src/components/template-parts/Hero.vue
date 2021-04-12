@@ -59,7 +59,7 @@ export default {
   will-change: background;
 
   &:after {
-    @include fluidFontSize(10em, 30em);
+    @include fluidFontSize(8em, 30em);
     content: "HELLO";
     position: absolute;
     font-weight: 900;
@@ -68,6 +68,10 @@ export default {
     will-change: color;
     opacity: 7%;
     -webkit-text-stroke: 7px var(--color-light);
+
+    @media (max-width: 900px) {
+      -webkit-text-stroke-width: 4px;
+    }
   }
 }
 
