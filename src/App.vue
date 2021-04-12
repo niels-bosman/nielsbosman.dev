@@ -22,14 +22,14 @@ export default {
     switchTheme() {
       this.isDark = !this.isDark
     },
-    OSIsLight() {
-      return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches
+    OSIsDark() {
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
     },
   },
   created() {
     // Base theme on currently set theme. Else base it on the OS theme.
     const storedTheme = window.localStorage.getItem('theme')
-    this.isDark = storedTheme !== null ? storedTheme === 'dark' : !this.OSIsLight()
+    this.isDark = storedTheme !== null ? storedTheme === 'dark' : this.OSIsDark()
     window.localStorage.setItem('isDark', this.isDark ? 'dark' : 'light')
   }
 }
