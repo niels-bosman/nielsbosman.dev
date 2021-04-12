@@ -8,11 +8,11 @@
       <h1 class="heading" :style="{'transform': `translate(${right()}px`}">
         Niels Bosman<highlight>.</highlight>
       </h1>
-      <p class="subtitle" :style="{'transform': `translate(${left()}px`}">
+      <h2 class="subtitle" :style="{'transform': `translate(${left()}px`}">
         Webontwikkelaar
         <highlight>&</highlight>
         student
-      </p>
+      </h2>
     </article>
     <scroll-button/>
   </div>
