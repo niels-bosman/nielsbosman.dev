@@ -79,6 +79,10 @@ export default {
 
   &:hover {
     transform: scale(.9);
+
+    &.active {
+      transform: none;
+    }
   }
 
   &.active {
