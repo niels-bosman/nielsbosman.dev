@@ -25,4 +25,4 @@ jobs:
         server: nielsbosman.dev
         username: u781196832
         password: ${{ secrets.ftp_password }}
-        local_dir: ./dist/
+        local-dir: ./dist/
