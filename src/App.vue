@@ -42,11 +42,9 @@ export default {
 @import "assets/scss/mixins";
 @import "assets/scss/container";
 
-$color-canvas-dark-1: #31323a;
-$color-canvas-dark-1: #3c3d4b;
+$color-canvas-dark-1: #2a2b33;
 $color-canvas-dark-2: #4e5065;
 $color-canvas-dark-3: #25262f;
-$color-canvas-dark-4: rgba(78, 80, 101, 0.5);
 
 $color-canvas-light-1: #FFF;
 $color-canvas-light-2: #DBDBDB;
@@ -72,13 +70,13 @@ $color-canvas-light-3: #e4e4e4;
 
 .light {
   --color-light: #{$color-canvas-dark-2};
-  --color-lightest: #{$color-canvas-dark-1};
+  --color-lightest: #{$color-canvas-dark-2};
 
   --color-dark: #{$color-canvas-light-2};
   --color-dark-light: #{$color-canvas-light-1};
   --color-dark-lighter: #{$color-canvas-light-3};
 
-  --color-light-dark: #{$color-canvas-dark-4};
+  --color-light-dark: #{$color-canvas-dark-1};
 }
 
 ::selection {
