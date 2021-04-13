@@ -43,8 +43,10 @@ export default {
 @import "assets/scss/container";
 
 $color-canvas-dark-1: #31323a;
+$color-canvas-dark-1: #3c3d4b;
 $color-canvas-dark-2: #4e5065;
 $color-canvas-dark-3: #25262f;
+$color-canvas-dark-4: rgba(78, 80, 101, 0.5);
 
 $color-canvas-light-1: #FFF;
 $color-canvas-light-2: #DBDBDB;
@@ -76,7 +78,7 @@ $color-canvas-light-3: #e4e4e4;
   --color-dark-light: #{$color-canvas-light-1};
   --color-dark-lighter: #{$color-canvas-light-3};
 
-  --color-light-dark: #{$color-canvas-dark-1};
+  --color-light-dark: #{$color-canvas-dark-4};
 }
 
 ::selection {
@@ -107,25 +109,23 @@ h2 {
   font-family: 'Lato', sans-serif;
 }
 
-.has-text {
-  &:after {
-    max-width: 100vw;
-    overflow-x: hidden;
-    @include fluidFontSize(8em, 25em);
-    position: absolute;
-    font-weight: 900;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: transparent;
-    transition: var(--base-transition-timing) var(--base-transition-motion) -webkit-text-stroke;
-    will-change: color;
-    opacity: 4%;
-    -webkit-text-stroke: 7px var(--color-light-dark);
+.has-text:after {
+  @include fluidFontSize(8em, 25em);
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: absolute;
+  font-weight: 900;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: transparent;
+  transition: var(--base-transition-timing) var(--base-transition-motion) -webkit-text-stroke;
+  will-change: color;
+  -webkit-text-stroke: var(--color-light-dark) 7px;
+  opacity: 0.05;
 
-    @media (max-width: 900px) {
-      -webkit-text-stroke-width: 4px;
-    }
+  @media (max-width: 900px) {
+    -webkit-text-stroke-width: 4px;
   }
 }
 </style>
