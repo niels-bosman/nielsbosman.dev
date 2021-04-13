@@ -41,18 +41,19 @@ export default {
     window.localStorage.setItem('isDark', this.isDark ? 'dark' : 'light')
   },
   mounted() {
-    if (isMobile) return;
+    if (isMobile) return
 
     // Define base settings for parallax.
-    const baseSettings = { frictionY: 0, frictionX: 0.05, scalarX: 3, pointerEvents: true }
+    const settings = { frictionY: 0, frictionX: 0.05, scalarX: 2, pointerEvents: true }
 
     // Define all scenes.
     const parallaxes = [
-      { id: 'hero-scene', settings: baseSettings },
-      { id: 'about-me-heading-scene', settings: { ...baseSettings, invertX: false } },
-      { id: 'about-me-text-scene', settings: baseSettings },
-      { id: 'experience-scene', settings: { ...baseSettings, invertX: false } },
-      { id: 'experience-section', settings: baseSettings }
+      { id: 'hero-scene', settings },
+      { id: 'about-me-heading-scene', settings: { ...settings, invertX: false } },
+      { id: 'about-me-text-scene', settings },
+      { id: 'experience-scene', settings: { ...settings, invertX: false } },
+      { id: 'experience-section', settings },
+      { id: 'technology-scene', settings }
     ]
 
     // Instantiate parallax scenes.
