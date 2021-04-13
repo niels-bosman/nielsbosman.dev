@@ -11,14 +11,18 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../../assets/scss/mixins";
+
 aside {
+  @include fluidFontSize(16px, 18px);
   display: inline;
-  padding: 8px 20px;
-  background: var(--color-primary);
+  padding: 6px 16px;
+  background: var(--color-dark-light);
   border-radius: 17px;
-  font-size: 18px;
   font-weight: 900;
-  color: #FFF;
+  color: var(--color-light);
+  transition: var(--base-transition-timing) var(--base-transition-motion) background, color;
+  will-change: background, color;
 
   @media (max-width: 950px) {
     padding: 6px 16px;

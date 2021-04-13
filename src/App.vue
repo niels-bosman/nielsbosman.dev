@@ -76,7 +76,7 @@ $color-canvas-light-3: #e4e4e4;
   --color-dark-light: #{$color-canvas-light-1};
   --color-dark-lighter: #{$color-canvas-light-3};
 
-  --color-light-dark: #000000;
+  --color-light-dark: #{$color-canvas-dark-1};
 }
 
 ::selection {
@@ -86,13 +86,14 @@ $color-canvas-light-3: #e4e4e4;
 body {
   margin: 0;
   padding: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
   word-wrap: break-word;
-  font-family: 'Lato Black', sans-serif;
   color: var(--color-dark);
   font-weight: 900;
 }
@@ -119,7 +120,7 @@ h2 {
     color: transparent;
     transition: var(--base-transition-timing) var(--base-transition-motion) -webkit-text-stroke;
     will-change: color;
-    opacity: 1%;
+    opacity: 4%;
     -webkit-text-stroke: 7px var(--color-light-dark);
 
     @media (max-width: 900px) {

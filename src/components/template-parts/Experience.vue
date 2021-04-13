@@ -116,18 +116,22 @@ export default {
 }
 
 .item-title {
-  @include fluidFontSize(1.5em, 1.5em);
+  @include fluidFontSize(1.3em, 1.5em);
   color: var(--color-lightest);
-  font-weight: 900;
+  font-weight: 700;
   font-family: 'Lato', sans-serif;
-  margin: 0 0 20px 0;
+  margin: 0 0 30px 0;
   transition: var(--base-transition-timing) var(--base-transition-motion) color;
   will-change: color;
+
+  @media (max-width: 900px) {
+    margin: 0 0 15px 0;
+  }
 }
 
 article {
   line-height: 2;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   color: var(--color-light);
   max-width: 900px;
@@ -137,6 +141,10 @@ article {
 
   @media (max-width: 1300px) {
     font-size: 16px;
+  }
+
+  p {
+    margin: 0;
   }
 }
 
