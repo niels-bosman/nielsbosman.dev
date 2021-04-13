@@ -36,8 +36,8 @@ export default {
   background: var(--color-lightest);
   border-radius: 10px;
   box-shadow: 0 0 20px -10px rgb(0 0 0 / 40%);
-  transition: var(--base-transition-timing) var(--base-transition-motion) transform;
-  will-change: transform, filter;
+  transition: var(--base-transition-timing) var(--base-transition-motion) background, var(--base-transition-timing) var(--base-transition-motion) transform;
+  will-change: transform, background;
 
   .has-hovered-card & .technology-icon {
     filter: grayscale(100%);
