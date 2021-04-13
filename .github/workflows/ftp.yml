@@ -1,6 +1,14 @@
 on: push
 name: 🚀 Deploy website on push
 jobs:
+  build:
+      name: Yarn build
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - uses: borales/actions-yarn@v2.0.0
+          with:
+            cmd: build # will run `yarn build` command
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
