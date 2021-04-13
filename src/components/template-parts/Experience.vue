@@ -1,11 +1,14 @@
 <template>
   <section class="experience has-text">
-    <div class="container">
-      <h2 class="heading">Ervaring<highlight>.</highlight></h2>
-      <div class="items">
+    <div class="container" id="experience-scene">
+      <h2 class="heading" data-depth="0.3">
+        Ervaring<highlight>.</highlight>
+      </h2>
+      <div class="items" id="experience-section">
         <div v-for="experience in experiences"
              :key="experience.title"
              class="item"
+             data-depth="0.6"
         >
           <h4 class="item-title">
             {{ experience.title }}
@@ -97,10 +100,12 @@ export default {
   transition: var(--base-transition-timing) var(--base-transition-motion) color;
   will-change: color;
   line-height: .9;
+  position: relative !important;
 }
 
 .items {
   margin-top: 90px;
+  position: relative !important;
 
   @media (max-width: 600px) {
     margin-top: 50px;
@@ -109,6 +114,7 @@ export default {
 
 .item {
   margin-bottom: 70px;
+  position: relative !important;
 
   &:last-child {
     margin-bottom: 0;

@@ -1,5 +1,5 @@
 on: push
-name: 🚀 Deploy website on push
+name: 🚀 Run all Yarn commands.
 jobs:
   build:
       name: 🔨 Build
@@ -12,18 +12,6 @@ jobs:
         - uses: borales/actions-yarn@v2.0.0
           with:
             cmd: build # will run `yarn build` command
-  web-deploy:
-    name: 🎉 Deploy
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v2.3.2
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
-      with:
-        server: nielsbosman.dev
-        username: u781196832
-        password: ${{ secrets.ftp_password }}
-        local-dir: ./dist/
+        - uses: borales/actions-yarn@v2.0.0
+          with:
+            cmd: lint # will run `yarn lint` command

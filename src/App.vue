@@ -43,20 +43,20 @@ export default {
   mounted() {
     if (isMobile) return;
 
-    // Define base settings for parallax
+    // Define base settings for parallax.
     const baseSettings = { frictionY: 0, frictionX: 0.05, scalarX: 3, pointerEvents: true }
 
-    // Hero items
-    const hero = document.getElementById('hero-scene')
-    new Parallax(hero, baseSettings)
+    // Define all scenes.
+    const parallaxes = [
+      { id: 'hero-scene', settings: baseSettings },
+      { id: 'about-me-heading-scene', settings: { ...baseSettings, invertX: false } },
+      { id: 'about-me-text-scene', settings: baseSettings },
+      { id: 'experience-scene', settings: { ...baseSettings, invertX: false } },
+      { id: 'experience-section', settings: baseSettings }
+    ]
 
-    // Heading of About Me
-    const aboutMeHeading = document.getElementById('about-me-heading-scene')
-    new Parallax(aboutMeHeading, { ...baseSettings, invertX: false })
-
-    // Text and image of About Me
-    const aboutMeText = document.getElementById('about-me-text-scene')
-    new Parallax(aboutMeText, baseSettings)
+    // Instantiate parallax scenes.
+    parallaxes.forEach(item => new Parallax(document.getElementById(item.id), item.settings))
   },
 }
 </script>
