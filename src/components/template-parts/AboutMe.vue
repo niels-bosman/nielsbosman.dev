@@ -1,14 +1,16 @@
 <template>
-  <section class="content about-me has-text" @mousemove="mouseMovement">
+  <section class="content about-me has-text">
     <div class="container about">
-      <h2 class="heading" :style="{'transform': `translate(${right()}px`}">
-        Over mij<highlight>.</highlight>
-      </h2>
-      <div class="under" :style="{'transform': `translate(${left()}px`}">
-        <article>
+      <div id="about-me-heading-scene">
+        <h2 class="heading" data-depth="0.6">
+          Over mij<highlight>.</highlight>
+        </h2>
+      </div>
+      <div class="under" id="about-me-text-scene">
+        <article data-depth="0.2">
           <p class="text">
             Hoi! Mijn naam is Niels Bosman. Ik ben
-            <highlight>{{ getAge() }} jaar oud</highlight>
+            <highlight>{{ getAge }} jaar oud</highlight>
             en ik woon in Ede.
             Momenteel zit ik in mijn tweede jaar van mijn studie
             <highlight>HBO-ICT</highlight>
@@ -22,10 +24,11 @@
           <p class="text">
             Naast mijn opleiding ben ik in mijn vrije tijd veel bezig met het ontwikkelen van hobby-projecten op het
             gebied van Webdevelopment en ook werk ik als
-            <highlight>Freelance Webontwikkelaar</highlight>.
+            <highlight>Freelance Webontwikkelaar</highlight>
+            .
           </p>
         </article>
-        <figure class="image">
+        <figure class="image" data-depth="0.2">
           <picture>
             <source srcset="../../../public/me.webp" type="image/webp">
             <source srcset="../../../public/me.jpeg" type="image/jpeg">
@@ -39,37 +42,18 @@
 
 <script>
 import Highlight from '../atoms/Highlight'
-import {isMobile} from 'mobile-device-detect'
 
 export default {
   name: 'AboutMe',
   components: { Highlight },
-  data() {
-    return {
-      birthDate: new Date(2000, 2, 1),
-      diffX: 0,
-      diffXModifier: 100,
-    }
-  },
-  methods: {
-    getAge() {
-      const diffInMs = Date.now() - this.birthDate.getTime()
+  computed: {
+    getAge: () => {
+      const diffInMs = Date.now() - new Date(2000, 2, 1).getTime()
       const ageDate = new Date(diffInMs)
 
       return Math.abs(ageDate.getUTCFullYear() - 1970)
     },
-    mouseMovement(event) {
-      if (!isMobile) {
-        this.diffX = event.clientX - window.innerWidth / 2
-      }
-    },
-    left() {
-      return this.diffX / this.diffXModifier
-    },
-    right() {
-      return this.left() * -1
-    },
-  },
+  }
 }
 </script>
 
@@ -81,6 +65,7 @@ export default {
   max-width: 300px;
   max-height: 300px;
   overflow: hidden;
+  position: relative !important;
 
   @media (max-width: 1300px) {
     max-width: 250px;

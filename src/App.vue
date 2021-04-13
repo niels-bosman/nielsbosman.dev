@@ -16,6 +16,8 @@ import AboutMe from "./components/template-parts/AboutMe";
 import Experience from "./components/template-parts/Experience";
 import Technologies from "./components/template-parts/Technologies";
 import Projects from "./components/template-parts/Projects";
+import {isMobile} from "mobile-device-detect";
+import Parallax from "parallax-js";
 
 export default {
   name: 'App',
@@ -29,11 +31,33 @@ export default {
     },
   },
   created() {
+    // Set vh variable for mobile 100% height on hero.
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
     // Base theme on currently set theme. Else base it on the OS theme.
     const storedTheme = window.localStorage.getItem('theme')
     this.isDark = storedTheme !== null ? storedTheme === 'dark' : this.OSIsDark()
     window.localStorage.setItem('isDark', this.isDark ? 'dark' : 'light')
-  }
+  },
+  mounted() {
+    if (isMobile) return;
+
+    // Define base settings for parallax
+    const baseSettings = { frictionY: 0, frictionX: 0.05, scalarX: 3, pointerEvents: true }
+
+    // Hero items
+    const hero = document.getElementById('hero-scene')
+    new Parallax(hero, baseSettings)
+
+    // Heading of About Me
+    const aboutMeHeading = document.getElementById('about-me-heading-scene')
+    new Parallax(aboutMeHeading, { ...baseSettings, invertX: false })
+
+    // Text and image of About Me
+    const aboutMeText = document.getElementById('about-me-text-scene')
+    new Parallax(aboutMeText, baseSettings)
+  },
 }
 </script>
 
@@ -107,23 +131,34 @@ h2 {
   font-family: 'Lato', sans-serif;
 }
 
-.has-text:after {
-  @include fluidFontSize(8em, 25em);
-  max-width: 100vw;
-  overflow-x: hidden;
-  position: absolute;
-  font-weight: 900;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  color: transparent;
-  transition: var(--base-transition-timing) var(--base-transition-motion) -webkit-text-stroke;
-  will-change: color;
-  -webkit-text-stroke: var(--color-light-dark) 7px;
-  opacity: 0.05;
+.has-text {
 
-  @media (max-width: 900px) {
-    -webkit-text-stroke-width: 4px;
+  &:hover:after {
+    color: transparent;
+  }
+
+  &:after {
+    @include fluidFontSize(8em, 25em);
+    max-width: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    font-weight: 900;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-light-dark);
+    transition: .8s var(--base-transition-motion) color, -webkit-text-stroke;
+    will-change: color;
+    -webkit-text-stroke: var(--color-light-dark) 7px;
+    opacity: 0.04;
+
+    @media (max-width: 900px) {
+      -webkit-text-stroke-width: 4px;
+    }
+
+    @media (max-width: 500px) {
+      display: none;
+    }
   }
 }
 </style>
