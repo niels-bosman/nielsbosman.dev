@@ -8,52 +8,28 @@
         <p>Hier een opsomming van <highlight>technologieën</highlight> en <highlight>tools</highlight> waar ik ervaring mee heb. Dit zijn programmeertalen, libraries en frameworks.</p>
       </article>
       <section class="technologies" :class="{'has-hovered-card': hoverActive}" data-depth="0.4">
-        <technology-card name="Vue"
-                         @mouseenter="hoverActive = true"
-                         @mouseleave="hoverActive = false"
-        >
-          <img src="../../../public/vue.svg" alt="Laravel" loading="lazy">
+        <technology-card name="Vue" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
+          <img src="../../../public/vue.svg" alt="Vue" loading="lazy">
         </technology-card>
-        <technology-card name="Laravel"
-                         @mouseenter="hoverActive = true"
-                         @mouseleave="hoverActive = false"
-        >
+        <technology-card name="Laravel" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
           <img src="../../../public/laravel.svg" alt="Laravel" loading="lazy">
         </technology-card>
-        <technology-card name="Java"
-                         @mouseenter="hoverActive = true"
-                         @mouseleave="hoverActive = false"
-        >
+        <technology-card name="Java" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
           <img src="../../../public/java.svg" alt="Java" loading="lazy">
         </technology-card>
-        <technology-card name="PHP"
-                         @mouseenter="hoverActive = true"
-                         @mouseleave="hoverActive = false"
-        >
+        <technology-card name="PHP" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
           <img src="../../../public/php.svg" alt="Java" loading="lazy">
         </technology-card>
-        <technology-card name="JavaScript"
-                         @mouseenter="hoverActive = true"
-                         @mouseleave="hoverActive = false"
-        >
-          <img src="../../../public/javascript.svg" alt="Java" loading="lazy">
+        <technology-card name="TypeScript" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
+          <img src="../../../public/typescript.svg" alt="TypeScript" loading="lazy">
         </technology-card>
-        <technology-card name="SASS"
-                         @mouseenter="hoverActive = true"
-                         @mouseleave="hoverActive = false"
-        >
+        <technology-card name="SASS" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
           <img src="../../../public/scss.svg" alt="SASS" loading="lazy">
         </technology-card>
-        <technology-card name="Wordpress"
-                         @mouseenter="hoverActive = true"
-                         @mouseleave="hoverActive = false"
-        >
-          <img src="../../../public/wordpress.svg" alt="Java" loading="lazy">
+        <technology-card name="Wordpress" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
+          <img src="../../../public/wordpress.svg" alt="Wordpress" loading="lazy">
         </technology-card>
-        <technology-card name="Git"
-                         @mouseenter="hoverActive = true"
-                         @mouseleave="hoverActive = false"
-        >
+        <technology-card name="Git" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
           <img src="../../../public/git.svg" alt="Git" loading="lazy">
         </technology-card>
       </section>
@@ -69,9 +45,7 @@ export default {
   name: 'Technologies',
   components: { Highlight, TechnologyCard },
   data() {
-    return {
-      hoverActive: false
-    }
+    return { hoverActive: false }
   },
 }
 </script>
