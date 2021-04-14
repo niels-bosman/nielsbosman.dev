@@ -47,8 +47,8 @@ export default {
 
   &:hover {
     cursor: pointer;
-    transform: translateY(-10px);
-    box-shadow: 0 0 20px -10px rgb(0 0 0 / 40%);
+    transform: translateY(-7px);
+    box-shadow: 0 0 20px -10px rgba(0 0 0 / 40%);
 
     .technology-icon {
       filter: grayscale(0) !important;

@@ -72,7 +72,7 @@ $color-canvas-dark-2: #4e5065;
 $color-canvas-dark-3: #25262f;
 
 $color-canvas-light-1: #FFF;
-$color-canvas-light-2: #DBDBDB;
+$color-canvas-light-2: #EFEFEF;
 $color-canvas-light-3: #e4e4e4;
 
 :root {

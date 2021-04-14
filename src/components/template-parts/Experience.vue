@@ -124,7 +124,7 @@ export default {
 .item-title {
   @include fluidFontSize(1.3em, 1.5em);
   color: var(--color-lightest);
-  font-weight: 700;
+  font-weight: 900;
   font-family: 'Lato', sans-serif;
   margin: 0 0 30px 0;
   transition: var(--base-transition-timing) var(--base-transition-motion) color;
