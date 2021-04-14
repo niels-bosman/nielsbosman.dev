@@ -67,13 +67,13 @@ export default {
 @import "assets/scss/mixins";
 @import "assets/scss/container";
 
-$color-canvas-dark-1: #2a2b33;
-$color-canvas-dark-2: #4e5065;
-$color-canvas-dark-3: #25262f;
+$color-canvas-dark-1: #2A2B33;
+$color-canvas-dark-2: #4E5065;
+$color-canvas-dark-3: #25262F;
 
 $color-canvas-light-1: #FFF;
 $color-canvas-light-2: #EFEFEF;
-$color-canvas-light-3: #e4e4e4;
+$color-canvas-light-3: #E4E4E4;
 
 :root {
   --color-dark: #{$color-canvas-dark-1};
