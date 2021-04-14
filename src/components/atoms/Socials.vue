@@ -8,7 +8,7 @@
       >
         <i class="fab fa-github"/>
       </a>
-    </li>
+    </li>A
     <li class="item">
       <a :href="urls.linkedin"
          target="_blank"
@@ -16,15 +16,6 @@
          title="LinkedIn"
       >
         <i class="fab fa-linkedin"/>
-      </a>
-    </li>
-    <li class="item">
-      <a :href="urls.stackoverflow"
-         target="_blank"
-         rel="nofollow"
-         title="Stack Overflow"
-      >
-        <i class="fab fa-stack-overflow"/>
       </a>
     </li>
     <li class="item">
@@ -36,6 +27,15 @@
         <i class="fab fa-instagram"/>
       </a>
     </li>
+    <li class="item">
+      <a :href="`mailto:${urls.email}`"
+         rel="nofollow"
+         title="Email"
+      >
+        <i class="far fa-envelope-open"/>
+      </a>
+    </li>
+
   </ul>
 </template>
 
@@ -47,8 +47,8 @@ export default {
       urls: {
         github: "https://github.com/niels-bosman",
         linkedin: "https://www.linkedin.com/in/nielz",
-        stackoverflow: "https://stackoverflow.com/users/12377207/niels-bosman",
         instagram: "https://instagram.com/nielsrbosman",
+        email: "nielsbosman@mail.com",
       }
     }
   },

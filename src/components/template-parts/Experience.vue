@@ -1,7 +1,7 @@
 <template>
   <section class="experience has-text">
     <div class="container" id="experience-scene">
-      <h2 class="heading" data-depth="0.8">
+      <h2 class="heading" data-depth="-0.8">
         Ervaring<highlight>.</highlight>
       </h2>
       <div class="items" id="experience-section">
