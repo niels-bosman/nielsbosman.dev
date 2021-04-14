@@ -7,7 +7,7 @@
         </h2>
       </div>
       <div class="under" id="about-me-text-scene">
-        <article data-depth="0.2">
+        <article data-depth="-0.2">
           <p class="text">
             Hoi! Mijn naam is Niels Bosman. Ik ben
             <highlight>{{ getAge }} jaar oud</highlight>
@@ -27,7 +27,7 @@
             <highlight>Freelance Webontwikkelaar</highlight>.
           </p>
         </article>
-        <figure class="image" data-depth="0.2">
+        <figure class="image" data-depth="-0.2">
           <picture>
             <source srcset="../../../public/me.webp" type="image/webp">
             <source srcset="../../../public/me.jpeg" type="image/jpeg">

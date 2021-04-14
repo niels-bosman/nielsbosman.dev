@@ -8,7 +8,7 @@
       >
         <i class="fab fa-github"/>
       </a>
-    </li>A
+    </li>
     <li class="item">
       <a :href="urls.linkedin"
          target="_blank"

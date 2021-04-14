@@ -45,7 +45,7 @@ export default {
         },
         riff: {
           title: 'RIFF Digital Engagement',
-          depth: '0.3',
+          depth: '0.4',
           jobTitle: 'Front-end developer',
           start: 'jan. 2019',
           end: 'okt. 2019',
@@ -54,7 +54,7 @@ export default {
         },
         brandpepper: {
           title: 'Brandpepper',
-          depth: '0.4',
+          depth: '0.6',
           jobTitle: 'Stagiair Wordpress Development',
           start: 'aug. 2018',
           end: 'jan. 2019',
@@ -89,10 +89,6 @@ export default {
   @media (max-width: 700px) {
     padding: 50px 0;
   }
-}
-
-.container {
-  z-index: 1;
 }
 
 .heading {

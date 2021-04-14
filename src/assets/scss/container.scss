@@ -5,4 +5,5 @@
   max-width: $grid-row-width;
   width: calc(100vw - 30px);
   padding: 0 15px;
+  z-index: 1;
 }

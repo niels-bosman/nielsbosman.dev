@@ -5,23 +5,21 @@
     <about-me/>
     <experience/>
     <technologies/>
-    <projects/>
   </main>
 </template>
 
 <script>
 import ControlPanel from './components/atoms/ControlPanel'
 import Hero from './components/template-parts/Hero'
-import AboutMe from "./components/template-parts/AboutMe";
-import Experience from "./components/template-parts/Experience";
-import Technologies from "./components/template-parts/Technologies";
-import Projects from "./components/template-parts/Projects";
-import {isMobile} from "mobile-device-detect";
-import Parallax from "parallax-js";
+import AboutMe from './components/template-parts/AboutMe'
+import Experience from './components/template-parts/Experience'
+import Technologies from './components/template-parts/Technologies'
+import {isMobile} from 'mobile-device-detect'
+import Parallax from 'parallax-js'
 
 export default {
   name: 'App',
-  components: { ControlPanel, Hero, AboutMe, Experience, Technologies, Projects },
+  components: { ControlPanel, Hero, AboutMe, Experience, Technologies },
   data() {
     return { isDark: true }
   },
@@ -44,20 +42,20 @@ export default {
     if (isMobile) return
 
     // Define base settings for parallax.
-    const settings = { frictionY: 0, frictionX: 0.05, scalarX: 2, pointerEvents: true }
+    const settings = { frictionY: 0, frictionX: 0.05, scalarX: 1.5, pointerEvents: true, invertX: false }
 
     // Define all scenes.
-    const parallaxes = [
-      { id: 'hero-scene',             settings },
-      { id: 'about-me-heading-scene', settings: { ...settings, invertX: false } },
-      { id: 'about-me-text-scene',    settings },
-      { id: 'experience-scene',       settings: { ...settings, invertX: false } },
-      { id: 'experience-section',     settings: { ...settings, invertX: false } },
-      { id: 'technology-scene',       settings: { ...settings, invertX: false } }
+    const elements = [
+      'hero-scene',
+      'about-me-heading-scene',
+      'about-me-text-scene',
+      'experience-scene',
+      'experience-section',
+      'technology-scene'
     ]
 
     // Instantiate parallax scenes.
-    parallaxes.forEach(item => new Parallax(document.getElementById(item.id), item.settings))
+    elements.forEach(id => new Parallax(document.getElementById(id), settings))
   },
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <section class="content has-text">
     <div class="container" id="technology-scene">
-      <h2 class="heading" data-depth="0.6">
+      <h2 class="heading" data-depth="0.4">
         Technologieën<highlight>.</highlight>
       </h2>
       <article class="text" data-depth="0.4">
@@ -109,10 +109,6 @@ export default {
   display: flex !important;
   flex-wrap: wrap;
   margin: 40px -10px -10px -10px;
-}
-
-.container {
-  z-index: 1;
 }
 
 img {
