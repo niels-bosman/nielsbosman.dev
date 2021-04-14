@@ -27,7 +27,7 @@ export default {
 @import "../../assets/scss/mixins";
 
 .technology {
-  padding: 10px;
+  margin: 10px;
   width: calc(10% - 20px);
 
   @media (max-width: 1000px) {

@@ -1,13 +1,13 @@
 <template>
   <section class="content has-text">
     <div class="container" id="technology-scene">
-      <h2 class="heading" data-depth="-0.8">
+      <h2 class="heading" data-depth="0.6">
         Technologieën<highlight>.</highlight>
       </h2>
-      <article class="text" data-depth="-0.2">
+      <article class="text" data-depth="0.4">
         <p>Hier een opsomming van <highlight>technologieën</highlight> en <highlight>tools</highlight> waar ik ervaring mee heb. Dit zijn programmeertalen, libraries en frameworks.</p>
       </article>
-      <section class="technologies" :class="{'has-hovered-card': hoverActive}" data-depth="-0.4">
+      <section class="technologies" :class="{'has-hovered-card': hoverActive}" data-depth="0.8">
         <technology-card name="Vue" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
           <img src="../../../public/vue.svg" alt="Vue" loading="lazy">
         </technology-card>

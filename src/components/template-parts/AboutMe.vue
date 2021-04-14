@@ -24,8 +24,7 @@
           <p class="text">
             Naast mijn opleiding ben ik in mijn vrije tijd veel bezig met het ontwikkelen van hobby-projecten op het
             gebied van Webdevelopment en ook werk ik als
-            <highlight>Freelance Webontwikkelaar</highlight>
-            .
+            <highlight>Freelance Webontwikkelaar</highlight>.
           </p>
         </article>
         <figure class="image" data-depth="0.2">
