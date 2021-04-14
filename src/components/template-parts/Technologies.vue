@@ -1,13 +1,13 @@
 <template>
   <section class="content has-text">
     <div class="container" id="technology-scene">
-      <h2 class="heading" data-depth="0.8">
+      <h2 class="heading" data-depth="-0.8">
         Technologieën<highlight>.</highlight>
       </h2>
-      <article class="text" data-depth="0.2">
+      <article class="text" data-depth="-0.2">
         <p>Hier een opsomming van <highlight>technologieën</highlight> en <highlight>tools</highlight> waar ik ervaring mee heb. Dit zijn programmeertalen, libraries en frameworks.</p>
       </article>
-      <section class="technologies" :class="{'has-hovered-card': hoverActive}" data-depth="0.4">
+      <section class="technologies" :class="{'has-hovered-card': hoverActive}" data-depth="-0.4">
         <technology-card name="Vue" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
           <img src="../../../public/vue.svg" alt="Vue" loading="lazy">
         </technology-card>
@@ -18,7 +18,7 @@
           <img src="../../../public/java.svg" alt="Java" loading="lazy">
         </technology-card>
         <technology-card name="PHP" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
-          <img src="../../../public/php.svg" alt="Java" loading="lazy">
+          <img src="../../../public/php.svg" alt="PHP" loading="lazy">
         </technology-card>
         <technology-card name="TypeScript" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
           <img src="../../../public/typescript.svg" alt="TypeScript" loading="lazy">
@@ -62,11 +62,11 @@ export default {
   padding: 150px 0;
 
   @media (max-width: 1200px) {
-    padding: 100px 15px;
+    padding: 100px 0;
   }
 
   @media (max-width: 700px) {
-    padding: 50px 15px;
+    padding: 50px 0;
   }
 
   &:after {
@@ -107,8 +107,8 @@ export default {
 .technologies {
   position: relative !important;
   display: flex !important;
-  margin-top: 50px;
   flex-wrap: wrap;
+  margin: 40px -10px -10px -10px;
 }
 
 .container {

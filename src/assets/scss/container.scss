@@ -1,27 +1,8 @@
 .container {
   $grid-row-width: 1280px;
-  $grid-gutter: 32px;
 
   margin: 0 auto;
   max-width: $grid-row-width;
-  width: 100%;
-
-  &--gutter {
-    max-width: $grid-row-width + $grid-gutter;
-    padding-left: #{$grid-gutter / 2};
-    padding-right: #{$grid-gutter / 2};
-  }
-
-  &--flex {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  &--align-center {
-    align-items: center;
-  }
-
-  &--space-between {
-    justify-content: space-between;
-  }
+  width: calc(100vw - 30px);
+  padding: 0 15px;
 }

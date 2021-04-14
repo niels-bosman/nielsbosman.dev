@@ -1,6 +1,6 @@
 <template>
   <section class="content">
-    <h2 class="heading">Projects<highlight>.</highlight></h2>
+    <h2 class="heading">Projecten<highlight>.</highlight></h2>
   </section>
 </template>
 

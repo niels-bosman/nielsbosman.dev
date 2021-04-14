@@ -1,14 +1,14 @@
 <template>
   <section class="experience has-text">
     <div class="container" id="experience-scene">
-      <h2 class="heading" data-depth="0.3">
+      <h2 class="heading" data-depth="0.8">
         Ervaring<highlight>.</highlight>
       </h2>
       <div class="items" id="experience-section">
         <div v-for="experience in experiences"
              :key="experience.title"
              class="item"
-             data-depth="0.6"
+             :data-depth="experience.depth"
         >
           <h3 class="item-title">
             {{ experience.title }}
@@ -37,6 +37,7 @@ export default {
       experiences: {
         dtcMedia: {
           title: 'DTC Media Online',
+          depth: '0.3',
           jobTitle: 'Front-end developer',
           start: 'okt. 2019',
           end: 'heden',
@@ -44,6 +45,7 @@ export default {
         },
         riff: {
           title: 'RIFF Digital Engagement',
+          depth: '0.5',
           jobTitle: 'Front-end developer',
           start: 'jan. 2019',
           end: 'okt. 2019',
@@ -52,6 +54,7 @@ export default {
         },
         brandpepper: {
           title: 'Brandpepper',
+          depth: '0.2',
           jobTitle: 'Stagiair Wordpress Development',
           start: 'aug. 2018',
           end: 'jan. 2019',
@@ -73,18 +76,18 @@ export default {
   background: var(--color-dark);
   transition: var(--base-transition-timing) var(--base-transition-motion) background;
   will-change: background;
-  padding: 120px 15px;
+  padding: 120px 0;
 
   &:after {
     content: "WORK";
   }
 
   @media (max-width: 1200px) {
-    padding: 100px 15px;
+    padding: 100px 0;
   }
 
   @media (max-width: 700px) {
-    padding: 50px 15px;
+    padding: 50px 0;
   }
 }
 

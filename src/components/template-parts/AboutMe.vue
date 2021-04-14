@@ -131,11 +131,11 @@ export default {
   padding: 150px 0;
 
   @media (max-width: 1200px) {
-    padding: 100px 15px;
+    padding: 100px 0;
   }
 
   @media (max-width: 700px) {
-    padding: 50px 15px;
+    padding: 50px 0;
   }
 
   &:after {

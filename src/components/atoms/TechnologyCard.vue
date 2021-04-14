@@ -1,11 +1,13 @@
 <template>
   <div class="technology">
-    <div class="technology-icon">
-      <slot/>
+    <div class="technology-inner">
+      <div class="technology-icon">
+        <slot/>
+      </div>
+      <h5 class="technology-heading">
+        {{ name }}
+      </h5>
     </div>
-    <h5 class="technology-heading">
-      {{ name }}
-    </h5>
   </div>
 </template>
 
@@ -25,15 +27,33 @@ export default {
 @import "../../assets/scss/mixins";
 
 .technology {
-  min-width: 90px;
+  padding: 10px;
+  width: calc(10% - 20px);
+
+  @media (max-width: 1000px) {
+    width: calc(20% - 20px);
+  }
+
+  @media (max-width: 700px) {
+    width: calc(25% - 20px);
+  }
+
+  @media (max-width: 550px) {
+    width: calc(33% - 20px);
+  }
+
+  @media (max-width: 500px) {
+    width: calc(50% - 20px);
+  }
+}
+
+.technology-inner {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  background: #FFF;
+  background: #F6F6F6;
   border-radius: 10px;
   transition: var(--base-transition-timing) var(--base-transition-motion) background, var(--base-transition-timing) var(--base-transition-motion) transform, var(--base-transition-timing) var(--base-transition-motion) box-shadow;
   will-change: transform, background;

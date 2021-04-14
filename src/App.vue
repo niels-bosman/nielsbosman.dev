@@ -48,12 +48,12 @@ export default {
 
     // Define all scenes.
     const parallaxes = [
-      { id: 'hero-scene', settings },
+      { id: 'hero-scene',             settings },
       { id: 'about-me-heading-scene', settings: { ...settings, invertX: false } },
-      { id: 'about-me-text-scene', settings },
-      { id: 'experience-scene', settings: { ...settings, invertX: false } },
-      { id: 'experience-section', settings },
-      { id: 'technology-scene', settings: { ...settings, invertX: false } }
+      { id: 'about-me-text-scene',    settings },
+      { id: 'experience-scene',       settings: { ...settings, invertX: false } },
+      { id: 'experience-section',     settings: { ...settings, invertX: false } },
+      { id: 'technology-scene',       settings: { ...settings, invertX: false } }
     ]
 
     // Instantiate parallax scenes.
@@ -111,8 +111,6 @@ $color-canvas-light-3: #E4E4E4;
 body {
   margin: 0;
   padding: 0;
-  max-width: 100vw;
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -133,7 +131,8 @@ h2 {
 }
 
 .has-text {
-
+  max-width: 100vw;
+  overflow-x: hidden;
   &:hover:after {
     color: transparent;
   }
