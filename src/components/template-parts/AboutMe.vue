@@ -17,7 +17,7 @@
             op de Hogeschool van Arnhem en Nijmegen waarbij mijn uitstroomprofiel
             <highlight>Webdevelopment</highlight>
             is. Dit betekend dat ik hierdoor mijn kennis van het onwikkelen van web-oplossingen kan vebreden 👨🏼‍💻.
-            Deze opleiding volg ik als uitbreiding op mijn vooroplaiding
+            Deze opleiding volg ik als uitbreiding op mijn vooropleiding
             <highlight>Software Development</highlight>
             op het Graafschap College in Doetinchem.
           </p>

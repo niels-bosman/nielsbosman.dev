@@ -4,8 +4,8 @@
       <h2 class="heading" data-depth="0.8">
         Technologieën<highlight>.</highlight>
       </h2>
-      <article class="text" data-depth="0.4">
-        <p>Hier een opsomming van technologieën en tools waar ik ervaring mee heb.</p>
+      <article class="text" data-depth="0.2">
+        <p>Hier een opsomming van <highlight>technologieën</highlight> en <highlight>tools</highlight> waar ik ervaring mee heb. Dit zijn programmeertalen, libraries en frameworks.</p>
       </article>
       <section class="technologies" :class="{'has-hovered-card': hoverActive}" data-depth="0.4">
         <technology-card name="Vue"
@@ -56,18 +56,6 @@
         >
           <img src="../../../public/git.svg" alt="Git" loading="lazy">
         </technology-card>
-        <technology-card name="Webstorm"
-                         @mouseenter="hoverActive = true"
-                         @mouseleave="hoverActive = false"
-        >
-          <img src="../../../public/webstorm.svg" alt="Webstorm" loading="lazy">
-        </technology-card>
-        <technology-card name="Photoshop"
-                         @mouseenter="hoverActive = true"
-                         @mouseleave="hoverActive = false"
-        >
-          <img src="../../../public/photoshop.svg" alt="Photoshop" loading="lazy">
-        </technology-card>
       </section>
     </div>
   </section>
@@ -113,10 +101,16 @@ export default {
 }
 
 .text {
-  @include fluidFontSize(1rem, 1.2rem);
   position: relative !important;
   color: var(--color-light);
-  font-weight: 700;
+  font-weight: 500;
+  font-size: 20px;
+  transition: var(--base-transition-timing) var(--base-transition-motion) color;
+  will-change: color;
+
+  @media (max-width: 1300px) {
+    font-size: 16px;
+  }
 }
 
 .heading {

@@ -53,7 +53,7 @@ export default {
       { id: 'about-me-text-scene', settings },
       { id: 'experience-scene', settings: { ...settings, invertX: false } },
       { id: 'experience-section', settings },
-      { id: 'technology-scene', settings }
+      { id: 'technology-scene', settings: { ...settings, invertX: false } }
     ]
 
     // Instantiate parallax scenes.

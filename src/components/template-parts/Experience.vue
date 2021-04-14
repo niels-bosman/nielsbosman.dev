@@ -10,12 +10,12 @@
              class="item"
              data-depth="0.6"
         >
-          <h4 class="item-title">
+          <h3 class="item-title">
             {{ experience.title }}
             <highlight>&vert;</highlight>
             {{ experience.jobTitle }}
             <tag class="tag">{{ experience.start }} &dash; {{ experience.end }}</tag>
-          </h4>
+          </h3>
           <article>
             <p>{{ experience.description }}</p>
           </article>
@@ -137,7 +137,7 @@ export default {
 
 article {
   line-height: 2;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   color: var(--color-light);
   max-width: 900px;
