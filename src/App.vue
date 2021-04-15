@@ -64,6 +64,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700;900&display=swap');
 @import "assets/scss/mixins";
 @import "assets/scss/container";
+@import "assets/scss/font-awesome";
 
 $color-canvas-dark-1: #2A2B33;
 $color-canvas-dark-2: #4E5065;

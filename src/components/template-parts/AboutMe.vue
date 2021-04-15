@@ -31,7 +31,7 @@
           <picture>
             <source srcset="../../../public/me.webp" type="image/webp">
             <source srcset="../../../public/me.jpeg" type="image/jpeg">
-            <img src="../../../public/me.jpeg" alt="Niels Bosman" loading="lazy">
+            <img src="../../../public/me.jpeg" alt="Niels Bosman" loading="lazy" width="300" height="300">
           </picture>
         </figure>
       </div>

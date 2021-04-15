@@ -4,7 +4,7 @@
       <a :href="urls.github"
          target="_blank"
          title="GitHub"
-         rel="nofollow"
+         rel="noopener"
       >
         <i class="fab fa-github"/>
       </a>
@@ -12,7 +12,7 @@
     <li class="item">
       <a :href="urls.linkedin"
          target="_blank"
-         rel="nofollow"
+         rel="noopener"
          title="LinkedIn"
       >
         <i class="fab fa-linkedin"/>
@@ -21,7 +21,7 @@
     <li class="item">
       <a :href="urls.instagram"
          target="_blank"
-         rel="nofollow"
+         rel="noopener"
          title="Instagram"
       >
         <i class="fab fa-instagram"/>
@@ -29,7 +29,7 @@
     </li>
     <li class="item">
       <a :href="`mailto:${urls.email}`"
-         rel="nofollow"
+         rel="noopener"
          title="Email"
       >
         <i class="far fa-envelope-open"/>
