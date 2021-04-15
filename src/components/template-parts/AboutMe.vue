@@ -3,7 +3,8 @@
     <div class="container about">
       <div id="about-me-heading-scene">
         <h2 class="heading" data-depth="0.6">
-          Over mij<highlight>.</highlight>
+          Over mij
+          <highlight>.</highlight>
         </h2>
       </div>
       <div class="under" id="about-me-text-scene">
@@ -12,7 +13,7 @@
             Hoi! Mijn naam is Niels Bosman. Ik ben
             <highlight>{{ getAge }} jaar oud</highlight>
             en ik woon in Ede.
-            Momenteel zit ik in mijn tweede jaar van mijn studie
+            Momenteel zit ik in mijn {{ getYear }} jaar van mijn studie
             <highlight>HBO-ICT</highlight>
             op de Hogeschool van Arnhem en Nijmegen waarbij mijn uitstroomprofiel
             <highlight>Webdevelopment</highlight>
@@ -52,6 +53,17 @@ export default {
 
       return Math.abs(ageDate.getUTCFullYear() - 1970)
     },
+    getYear: () => {
+      const currentDate = Date.now()
+
+      if (currentDate > new Date(2021, 2, 1)) {
+        return 'tweede'
+      } else if (currentDate > new Date(2022, 2, 1)) {
+        return 'derde'
+      } else {
+        return 'vierde'
+      }
+    }
   }
 }
 </script>
