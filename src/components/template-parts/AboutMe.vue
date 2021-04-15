@@ -3,8 +3,7 @@
     <div class="container about">
       <div id="about-me-heading-scene">
         <h2 class="heading" data-depth="0.6">
-          Over mij
-          <highlight>.</highlight>
+          Over mij<highlight>.</highlight>
         </h2>
       </div>
       <div class="under" id="about-me-text-scene">
@@ -54,7 +53,7 @@ export default {
       return Math.abs(ageDate.getUTCFullYear() - 1970)
     },
     getYear: () => {
-      const currentDate = Date.now()
+      const currentDate = new Date()
 
       if (currentDate > new Date(2021, 2, 1)) {
         return 'tweede'
