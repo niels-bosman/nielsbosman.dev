@@ -29,6 +29,10 @@ export default {
     },
   },
   created() {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      this.isDark = e.matches === 'dark'
+    })
+
     // Set vh variable for mobile 100% height on hero.
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
