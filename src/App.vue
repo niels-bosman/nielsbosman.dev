@@ -33,13 +33,14 @@ export default {
     }
   },
   created() {
+    // Set the change of color scheme change event so it changes when user changes it.
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
       this.setTheme(e.matches === 'dark')
     })
 
     // Set vh variable for mobile 100% height on hero.
-    const vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    const vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
 
     // Base theme on currently set theme. Else base it on the OS theme.
     const storedTheme = window.localStorage.getItem('theme')
