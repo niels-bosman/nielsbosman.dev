@@ -1,10 +1,10 @@
 <template>
   <aside class="control-panel">
     <ul class="list">
-      <li class="item" :class="{'active' : isDark}" @click="setDark">
+      <li class="item" :class="{'active' : isDark}" @click="change(true)">
         <i class="fas fa-moon"/>
       </li>
-      <li class="item" :class="{'active' : !isDark}" @click="setLight">
+      <li class="item" :class="{'active' : !isDark}" @click="change(false)">
         <i class="fas fa-sun"/>
       </li>
     </ul>
@@ -22,15 +22,8 @@ export default {
       // We only want to switch the theme if it is not equal to the current theme.
       if (wantsToBeDark !== this.isDark) {
         this.$emit("switch")
+        window.localStorage.setItem('theme', wantsToBeDark ? 'dark' : 'light')
       }
-    },
-    setDark() {
-      this.change(true)
-      window.localStorage.setItem('theme', 'dark')
-    },
-    setLight() {
-      this.change(false)
-      window.localStorage.setItem('theme', 'light')
     }
   },
 }
