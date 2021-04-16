@@ -27,7 +27,7 @@
         <i class="fab fa-instagram"/>
       </a>
     </li>
-    <li class="item">
+    <li class="item mail">
       <a :href="`mailto:${urls.email}`"
          rel="noopener"
          title="Email"
@@ -74,6 +74,10 @@ export default {
 
   &:hover {
     transform: translateY(3px);
+  }
+
+  &.mail a {
+    @include fluidFontSize(1.5em, 1.9em);
   }
 
   a {

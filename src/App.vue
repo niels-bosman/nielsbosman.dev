@@ -27,10 +27,14 @@ export default {
     OSIsDark() {
       return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
     },
+    setTheme(isDark) {
+      this.isDark = isDark
+      window.localStorage.setItem('isDark', isDark ? 'dark' : 'light')
+    }
   },
   created() {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-      this.isDark = e.matches === 'dark'
+      this.setTheme(e.matches === 'dark')
     })
 
     // Set vh variable for mobile 100% height on hero.
@@ -39,8 +43,8 @@ export default {
 
     // Base theme on currently set theme. Else base it on the OS theme.
     const storedTheme = window.localStorage.getItem('theme')
-    this.isDark = storedTheme !== null ? storedTheme === 'dark' : this.OSIsDark()
-    window.localStorage.setItem('isDark', this.isDark ? 'dark' : 'light')
+    const wantsToBeDark = storedTheme !== null ? storedTheme === 'dark' : this.OSIsDark()
+    this.setTheme(wantsToBeDark)
   },
   mounted() {
     if (isMobile) return
