@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     OSIsDark() {
-      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      return window.matchMedia?.('(prefers-color-scheme: dark)').matches
     },
     setTheme(isDark) {
       this.isDark = isDark
