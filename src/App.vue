@@ -24,12 +24,14 @@ export default {
     return { isDark: true }
   },
   methods: {
-    OSIsDark() {
-      return window.matchMedia?.('(prefers-color-scheme: dark)').matches
-    },
     setTheme(isDark) {
       this.isDark = isDark
       window.localStorage.setItem('isDark', isDark ? 'dark' : 'light')
+    }
+  },
+  computed: {
+    OSIsDark() {
+      return window.matchMedia?.('(prefers-color-scheme: dark)').matches
     }
   },
   created() {
@@ -44,7 +46,7 @@ export default {
 
     // Base theme on currently set theme. Else base it on the OS theme.
     const storedTheme = window.localStorage.getItem('theme')
-    const wantsToBeDark = storedTheme !== null ? storedTheme === 'dark' : this.OSIsDark()
+    const wantsToBeDark = storedTheme !== null ? storedTheme === 'dark' : this.OSIsDark
     this.setTheme(wantsToBeDark)
   },
   mounted() {
