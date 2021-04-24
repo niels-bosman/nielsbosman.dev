@@ -6,7 +6,6 @@
          title="GitHub"
          rel="noopener"
          itemprop="author"
-         name="Niels Bosman"
       >
         <i class="fab fa-github"/>
       </a>
