@@ -11,6 +11,9 @@
         <technology-card name="Vue" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
           <img src="../../../public/vue.svg" alt="Vue" loading="lazy">
         </technology-card>
+        <technology-card name="React" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
+          <img src="../../../public/react.svg" alt="React" loading="lazy">
+        </technology-card>
         <technology-card name="Laravel" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
           <img src="../../../public/laravel.svg" alt="Laravel" loading="lazy">
         </technology-card>
