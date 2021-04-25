@@ -7,11 +7,12 @@
       <article class="text" data-depth="0.4">
         <p>Hier een opsomming van <highlight>technologieën</highlight> en <highlight>tools</highlight> waar ik ervaring mee heb. Dit zijn programmeertalen, libraries en frameworks.</p>
       </article>
-      <section class="technologies"
-               :class="{'has-hovered-card': hoverActive}"
-               data-depth="0.8"
-               @mouseenter="hoverActive = true"
-               @mouseleave="hoverActive = false"
+      <section
+          class="technologies"
+          :class="{'has-hovered-card': hoverActive}"
+          data-depth="0.8"
+          @mouseenter="hoverActive = true"
+          @mouseleave="hoverActive = false"
       >
         <technology-card name="Vue">
           <img src="../../../public/vue.svg" alt="Vue" loading="lazy">
