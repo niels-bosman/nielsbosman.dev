@@ -7,32 +7,37 @@
       <article class="text" data-depth="0.4">
         <p>Hier een opsomming van <highlight>technologieën</highlight> en <highlight>tools</highlight> waar ik ervaring mee heb. Dit zijn programmeertalen, libraries en frameworks.</p>
       </article>
-      <section class="technologies" :class="{'has-hovered-card': hoverActive}" data-depth="0.8">
-        <technology-card name="Vue" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
+      <section class="technologies"
+               :class="{'has-hovered-card': hoverActive}"
+               data-depth="0.8"
+               @mouseenter="hoverActive = true"
+               @mouseleave="hoverActive = false"
+      >
+        <technology-card name="Vue">
           <img src="../../../public/vue.svg" alt="Vue" loading="lazy">
         </technology-card>
-        <technology-card name="React" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
+        <technology-card name="React">
           <img src="../../../public/react.svg" alt="React" loading="lazy">
         </technology-card>
-        <technology-card name="Laravel" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
-          <img src="../../../public/laravel.svg" alt="Laravel" loading="lazy">
-        </technology-card>
-        <technology-card name="Java" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
-          <img src="../../../public/java.svg" alt="Java" loading="lazy">
-        </technology-card>
-        <technology-card name="PHP" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
-          <img src="../../../public/php.svg" alt="PHP" loading="lazy">
-        </technology-card>
-        <technology-card name="TypeScript" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
+        <technology-card name="TypeScript">
           <img src="../../../public/typescript.svg" alt="TypeScript" loading="lazy">
         </technology-card>
-        <technology-card name="SASS" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
+        <technology-card name="Laravel">
+          <img src="../../../public/laravel.svg" alt="Laravel" loading="lazy">
+        </technology-card>
+        <technology-card name="SASS">
           <img src="../../../public/scss.svg" alt="SASS" loading="lazy">
         </technology-card>
-        <technology-card name="Wordpress" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
+        <technology-card name="Java">
+          <img src="../../../public/java.svg" alt="Java" loading="lazy">
+        </technology-card>
+        <technology-card name="PHP">
+          <img src="../../../public/php.svg" alt="PHP" loading="lazy">
+        </technology-card>
+        <technology-card name="Wordpress">
           <img src="../../../public/wordpress.svg" alt="Wordpress" loading="lazy">
         </technology-card>
-        <technology-card name="Git" @mouseenter="hoverActive = true" @mouseleave="hoverActive = false">
+        <technology-card name="Git">
           <img src="../../../public/git.svg" alt="Git" loading="lazy">
         </technology-card>
       </section>
