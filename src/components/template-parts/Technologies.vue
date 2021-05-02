@@ -23,23 +23,20 @@
         <technology-card name="TypeScript">
           <img src="../../../public/typescript.svg" alt="TypeScript" loading="lazy">
         </technology-card>
-        <technology-card name="Laravel">
-          <img src="../../../public/laravel.svg" alt="Laravel" loading="lazy">
-        </technology-card>
         <technology-card name="SASS">
           <img src="../../../public/scss.svg" alt="SASS" loading="lazy">
         </technology-card>
-        <technology-card name="Java">
-          <img src="../../../public/java.svg" alt="Java" loading="lazy">
+        <technology-card name="Laravel">
+          <img src="../../../public/laravel.svg" alt="Laravel" loading="lazy">
         </technology-card>
-        <technology-card name="PHP">
-          <img src="../../../public/php.svg" alt="PHP" loading="lazy">
-        </technology-card>
-        <technology-card name="Wordpress">
-          <img src="../../../public/wordpress.svg" alt="Wordpress" loading="lazy">
+        <technology-card name="NPM">
+          <img src="../../../public/npm.svg" alt="NPM" loading="lazy">
         </technology-card>
         <technology-card name="Git">
           <img src="../../../public/git.svg" alt="Git" loading="lazy">
+        </technology-card>
+        <technology-card name="Wordpress">
+          <img src="../../../public/wordpress.svg" alt="Wordpress" loading="lazy">
         </technology-card>
       </section>
     </div>
