@@ -16,7 +16,7 @@
             <highlight>HBO-ICT</highlight>
             op de Hogeschool van Arnhem en Nijmegen waarbij mijn uitstroomprofiel
             <highlight>Webdevelopment</highlight>
-            is. Dit betekend dat ik hierdoor mijn kennis van het onwikkelen van web-oplossingen kan vebreden 👨🏼‍💻.
+            is. Dit betekent dat ik hierdoor mijn kennis van het onwikkelen van weboplossingen kan verbreden 👨🏼‍💻.
             Deze opleiding volg ik als uitbreiding op mijn vooropleiding
             <highlight>Software Development</highlight>
             op het Graafschap College in Doetinchem.
@@ -59,9 +59,9 @@ export default {
         return 'tweede'
       } else if (currentDate > new Date(2022, 2, 1)) {
         return 'derde'
-      } else {
-        return 'vierde'
       }
+
+      return 'vierde'
     }
   }
 }
