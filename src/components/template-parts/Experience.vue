@@ -36,7 +36,7 @@ export default {
     return {
       experiences: {
         dtcMedia: {
-          title: 'DTC Media Online',
+          title: 'PowerKraut',
           depth: '0.2',
           jobTitle: 'Front-end developer',
           start: 'okt. 2019',
