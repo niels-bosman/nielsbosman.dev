@@ -23,6 +23,5 @@ jobs:
         with:
           server: ftp.nielsbosman.dev
           local-dir: ./dist/
-          server-dir: ./public_html/
           username: u781196832
           password: ${{ secrets.FTP_PASSWORD }}
