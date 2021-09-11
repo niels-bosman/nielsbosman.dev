@@ -2,9 +2,11 @@
   <main :class="[isDark ? 'dark' : 'light']">
     <control-panel :is-dark="isDark" @switch="isDark = !isDark" />
     <hero />
-    <about-me v-if="DOMContentLoaded" />
-    <experience v-if="DOMContentLoaded" />
-    <technologies v-if="DOMContentLoaded" />
+    <template v-if="DOMContentLoaded">
+      <about-me />
+      <experience />
+      <technologies />
+    </template>
   </main>
 </template>
 
@@ -69,8 +71,10 @@ export default {
       'technology-scene'
     ]
 
-    // Instantiate parallax scenes.
-    elements.forEach(id => new Parallax(document.getElementById(id), settings))
+    window.addEventListener('DOMContentLoaded', () => {
+      // Instantiate parallax scenes.
+      elements.forEach(id => new Parallax(document.getElementById(id), settings))
+    })
   },
 }
 </script>
