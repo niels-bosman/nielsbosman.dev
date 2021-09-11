@@ -1,10 +1,10 @@
 <template>
   <main :class="[isDark ? 'dark' : 'light']">
-    <control-panel :is-dark="isDark" @switch="isDark = !isDark"/>
-    <hero/>
-    <about-me/>
-    <experience/>
-    <technologies/>
+    <control-panel :is-dark="isDark" @switch="isDark = !isDark" />
+    <hero />
+    <about-me v-if="DOMContentLoaded" />
+    <experience v-if="DOMContentLoaded" />
+    <technologies v-if="DOMContentLoaded" />
   </main>
 </template>
 
@@ -14,14 +14,16 @@ import Hero from './components/template-parts/Hero'
 import AboutMe from './components/template-parts/AboutMe'
 import Experience from './components/template-parts/Experience'
 import Technologies from './components/template-parts/Technologies'
-import {isMobile} from 'mobile-device-detect'
 import Parallax from 'parallax-js'
 
 export default {
   name: 'App',
   components: { ControlPanel, Hero, AboutMe, Experience, Technologies },
   data() {
-    return { isDark: true }
+    return {
+      isDark: true,
+      DOMContentLoaded: false,
+    }
   },
   methods: {
     setTheme(isDark) {
@@ -40,6 +42,8 @@ export default {
       this.setTheme(e.matches === 'dark')
     })
 
+    window.addEventListener('DOMContentLoaded', () => this.DOMContentLoaded = true)
+
     // Set vh variable for mobile 100% height on hero.
     const vh = window.innerHeight * 0.01
     document.documentElement.style.setProperty('--vh', `${vh}px`)
@@ -50,7 +54,7 @@ export default {
     this.setTheme(wantsToBeDark)
   },
   mounted() {
-    if (isMobile) return
+    if (window.matchMedia('(max-width: 600px)')) return
 
     // Define base settings for parallax.
     const settings = { frictionY: 0, frictionX: 0.05, scalarX: 1.5, pointerEvents: true, invertX: false }
