@@ -21,7 +21,7 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
-          server: ftp://nielsbosman.dev
+          server: ftp.nielsbosman.dev
           local-dir: ./dist/
           username: u781196832
           password: ${{ secrets.FTP_PASSWORD }}
