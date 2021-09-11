@@ -54,7 +54,7 @@ export default {
     this.setTheme(wantsToBeDark)
   },
   mounted() {
-    if (window.matchMedia('(max-width: 600px)')) return
+    if (window.matchMedia('(max-width: 600px)').matches) return
 
     // Define base settings for parallax.
     const settings = { frictionY: 0, frictionX: 0.05, scalarX: 1.5, pointerEvents: true, invertX: false }
