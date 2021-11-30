@@ -23,7 +23,10 @@
         <technology-card name="TypeScript">
           <img src="../../../public/typescript.svg" alt="TypeScript" loading="lazy">
         </technology-card>
-        <technology-card name="Next JS">
+        <technology-card name="Node.js">
+          <img src="../../../public/nodejs.svg" alt="Node JS" loading="lazy">
+        </technology-card>
+        <technology-card name="Next.js">
           <img src="../../../public/nextjs.svg" alt="Next JS" loading="lazy">
         </technology-card>
         <technology-card name="SASS">
